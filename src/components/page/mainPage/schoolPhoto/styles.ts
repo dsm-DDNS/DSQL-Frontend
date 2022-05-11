@@ -88,6 +88,14 @@ export const SchoolButton = styled.div`
   font-size: 20px;
   margin-bottom: 10px;
   margin-right: 24px;
+  color: #000;
+  a:link {
+    text-decoration: none;
+    color: #000;
+  }
+  a:visited {
+    color: #000;
+  }
 `;
 
 export const SchoolExplain = styled.div`
