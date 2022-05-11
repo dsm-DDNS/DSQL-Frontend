@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import * as S from "./styles";
 
 export default function SchoolPhoto() {
   const schoolGrid = ["", "", "", "", "", ""];
-  
+
   return (
     <S.School>
       <S.SchoolTitle>
@@ -15,7 +16,9 @@ export default function SchoolPhoto() {
         <hr />
       </S.SchoolTitle>
       <S.SchoolView>
-        <S.SchoolButton>View Button</S.SchoolButton>
+        <S.SchoolButton>
+          <Link to={"/photo"}>View All</Link>
+        </S.SchoolButton>
         <S.SchoolExplain>
           대전시교육청은 3일 대덕소프트웨어마이스터고등학교에서 '대전 학생 걷기
           앱(App) 제작발표회'를 개최했다.대전시교육청과
