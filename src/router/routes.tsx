@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../components/common/header";
 import PhotoAlbum from "../components/page/album";
 import MainPage from "../components/page/mainPage";
+import ProjectList from "../components/page/projectList";
 
 export default function Router() {
   return (
@@ -10,7 +11,8 @@ export default function Router() {
         <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/photo_album" element={<PhotoAlbum />} />
+          <Route path="/photo" element={<PhotoAlbum />} />
+          <Route path="/list" element={<ProjectList />} />
         </Routes>
       </BrowserRouter>
     </>
