@@ -1,7 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../components/common/header";
 import PhotoAlbum from "../components/page/album";
+import Login from "../components/page/auth/login";
+import SignUp from "../components/page/auth/signup";
 import MainPage from "../components/page/mainPage";
+import NewsPaper from "../components/page/newspaper";
 import ProjectList from "../components/page/projectList";
 
 export default function Router() {
@@ -13,6 +16,9 @@ export default function Router() {
           <Route path="/" element={<MainPage />} />
           <Route path="/photo" element={<PhotoAlbum />} />
           <Route path="/list" element={<ProjectList />} />
+          <Route path="/paper" element={<NewsPaper />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </>
