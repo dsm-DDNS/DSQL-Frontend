@@ -11,12 +11,12 @@ export const PostDiv = styled.div`
   overflow: scroll;
   overflow-x: hidden;
   &::-webkit-scrollbar {
-    background-color: #e3e3e3;
+    background-color: #909090;
     border-radius: 5px;
     width: 5px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #000000;
+    background-color: #ffffff;
     border-radius: 3px;
     width: 5px;
   }
@@ -31,6 +31,8 @@ export const ExplainContainer = styled.div`
 export const Explain = styled.div`
   display: flex;
   color: #c9c9c9;
+  opacity: 0.5;
+  font-family: "Gowun Batang", serif;
   font-size: 30px;
 `;
 
@@ -40,7 +42,8 @@ export const PostContainer = styled.div`
   margin-right: 75px;
 `;
 export const Title = styled.div<{ size: number }>`
-  color: #000;
+  color: #c9c9c9;
+  font-family: "Gowun Batang", serif;
   font-size: ${(props) => props.size + "px"};
 `;
 

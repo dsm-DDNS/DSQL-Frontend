@@ -14,6 +14,25 @@ export const Banner = styled.div`
   }
 `;
 
+export const View = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 150px;
+  top: 110px;
+  font-size: 20px;
+  color: #c9c9c9;
+  font-family: "Gowun Batang", serif;
+  font-weight: bold;
+  a:link {
+    text-decoration: none;
+    color: #c9c9c9;
+  }
+  a:visited {
+    color: #c9c9c9;
+  }
+`;
+
 export const ExplainContainer = styled.div`
   width: 100%;
   box-sizing: border-box;
@@ -23,11 +42,14 @@ export const ExplainContainer = styled.div`
 export const Explain = styled.div`
   display: flex;
   color: #c9c9c9;
+  opacity: 0.5;
   font-size: 30px;
+  font-family: "Gowun Batang", serif;
 `;
 
 export const ProjectList = styled.div`
   width: 100%;
+  position: relative;
   box-sizing: border-box;
   padding: 0px 127px;
   display: grid;
@@ -44,6 +66,7 @@ export const Footer = styled.div`
   padding: 0px 167px;
   display: inline-flex;
   justify-content: space-between;
+  font-family: "Gowun Batang", serif;
 `;
 
 export const Developer = styled.div`
@@ -64,5 +87,10 @@ export const Developer = styled.div`
     bottom: 0;
     right: 0;
     font-size: 70px;
+    color: #fff;
   }
+`;
+
+export const Project = styled.div<{ marginNumber: number }>`
+  margin-top: ${(props) => props.marginNumber}px;
 `;

@@ -1,8 +1,32 @@
 import { Link } from "react-router-dom";
 import * as S from "./styles";
+import axios from "axios";
+import { BASE_URL } from "../../../../lib/export/data";
+import { useEffect, useState } from "react";
 
 export default function SchoolPhoto() {
-  const schoolGrid = ["", "", "", "", "", ""];
+  const [photo, setPhoto] = useState<string[]>(["", "", "", "", "", ""]);
+  const [content, setContent] = useState<string>("");
+
+  useEffect(() => {
+    const getPhoto = () => {
+      axios({
+        method: "GET",
+        url: BASE_URL + "/api/dsql/v1/post/list",
+        params: {
+          size: 6,
+        },
+      })
+        .then((res) => {
+          setContent(res.data.shortContent);
+          setPhoto(res.data.shortPostList.map((it: any) => it.imgList[0]));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    getPhoto();
+  }, []);
 
   return (
     <S.School>
@@ -20,16 +44,16 @@ export default function SchoolPhoto() {
           <Link to={"/photo"}>View All</Link>
         </S.SchoolButton>
         <S.SchoolExplain>
-          대전시교육청은 3일 대덕소프트웨어마이스터고등학교에서 '대전 학생 걷기
-          앱(App) 제작발표회'를 개최했다.대전시교육청과
-          대덕소프트웨어마이스터고, 대전체육교과연구회의 협업을 통해 전국 최초로
-          개발된 이 앱은 대전 학생들이 직접 제작하고 학교 현장에서 활용한다는
-          측면에서 그 의의가 매우 크다.
+          {content}
         </S.SchoolExplain>
         <S.SchoolGrid>
-          {schoolGrid.map((item, i: number) => (
+          {photo.map((item, i: number) => (
             <>
-              <img src="" alt="" className={`img${i}`} />
+              <img
+                src={item}
+                alt="이미지를 불러올 수 없었습니다."
+                className={`img${i}`}
+              />
             </>
           ))}
         </S.SchoolGrid>

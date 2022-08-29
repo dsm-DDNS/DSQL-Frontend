@@ -1,19 +1,89 @@
+import { useState } from "react";
 import * as S from "./styles";
 
-export default function Project({ color }: any) {
+export default function Project(props: any) {
+  const { img, introduction, startDate, endDate, devList, logo } = props;
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [currentDevSlide, setCurrentDevSlide] = useState<number>(0);
+
+  const [showDev, setShowDev] = useState(devList.slice(0, 6));
+
+  const onChangeImage = (n: number) => {
+    if (img.length <= n) n = 0;
+    if (n < 0) n = img.length - 1;
+    setCurrentSlide(n);
+  };
+
+  const pagination = () => {
+    const result = [<span>ㅤ</span>];
+    const len = parseInt(`${devList.length / 6 + 1}`);
+
+    if (len - 1) {
+      result.pop();
+      for (let i = 0; i < len; i++) {
+        result.push(
+          i === currentDevSlide ? (
+            <span style={{ color: "#fff" }} onClick={() => showPage(i)}>
+              •
+            </span>
+          ) : (
+            <span onClick={() => showPage(i)}>•</span>
+          )
+        );
+      }
+    }
+    return result;
+  };
+
+  const showPage = (i: number) => {
+    setCurrentDevSlide(i);
+    setShowDev(devList.slice(6 * i, 6 * (i + 1)));
+  };
+
   return (
     <>
-      <S.Project color={color}>
-        <S.ProjectContent>
-          약 5년 간 서비스를 제공해온 노하우를 바탕으로 EntryDSM은 지속적인
-          성장을 이뤄내고 있습니다.
-        </S.ProjectContent>
-        <S.ProjectImage>
-          <img src="" alt="" />
-        </S.ProjectImage>
+      <S.Project>
         <S.ClubName>
-          <img src="" alt="" />
+          <img src={logo ? logo : ""} alt="" />
         </S.ClubName>
+        <S.ProjectContent>{introduction ? introduction : ""}</S.ProjectContent>
+        <S.ProjectImage>
+          <S.Slide
+            onClick={() => onChangeImage(currentSlide - 1)}
+            style={{ left: "-15px" }}
+          >
+            <div>‹</div>
+          </S.Slide>
+          {img.map((item: any, i: number) => (
+            <>
+              {currentSlide === i ? (
+                <img src={item.url ? item.url : ""} alt="" />
+              ) : (
+                <></>
+              )}
+            </>
+          ))}
+          <S.Slide
+            onClick={() => onChangeImage(currentSlide + 1)}
+            style={{ right: "-15px" }}
+          >
+            <div>›</div>
+          </S.Slide>
+        </S.ProjectImage>
+        <S.ShowDev>
+          <S.DeveloperList>
+            {showDev.map((item: any) => (
+              <S.Developer>
+                {item.studentId ? item.studentId : ""}{" "}
+                {item.name ? item.name : ""}
+              </S.Developer>
+            ))}
+          </S.DeveloperList>
+          <S.Pagination>{pagination()}</S.Pagination>
+        </S.ShowDev>
+        <S.Period>
+          {startDate ? startDate : ""} ~ {endDate ? endDate : " "}
+        </S.Period>
       </S.Project>
     </>
   );

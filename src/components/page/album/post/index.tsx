@@ -1,27 +1,20 @@
 import * as S from "./styles";
 
-export default function Post() {
+interface propsType {
+  title?: string;
+  content?: string;
+  imgURL?: string;
+}
+
+export default function Post(props: propsType) {
+  const { title, content, imgURL } = props;
   return (
     <div>
       <S.PostImage>
-        <img src="" alt="" />
-        <S.imageTitle>워크허브 제작발표회</S.imageTitle>
+        <img src={imgURL ? imgURL : ""} alt="" />
+        <S.imageTitle>{title ? title : "제목이 없습니다"}</S.imageTitle>
       </S.PostImage>
-      <S.P>
-        대전시교육청은 3일 대덕소프트웨어마이스터고등학교에서 '대전 학생 걷기
-        앱(App) 제작발표회'를 개최했다.대전시교육청과 대덕소프트웨어마이스터고,
-        대전체육교과연구회의 협업을 통해 전국 최초로 개발된 이 앱은 대전
-        학생들이 직접 제작하고 학교 현장에서 활용한다는 측면에서 그 의의가 매우
-        크다.대전시교육청은 3일 대덕소프트웨어마이스터고등학교에서 '대전 학생 걷기
-        앱(App) 제작발표회'를 개최했다.대전시교육청과 대덕소프트웨어마이스터고,
-        대전체육교과연구회의 협업을 통해 전국 최초로 개발된 이 앱은 대전
-        학생들이 직접 제작하고 학교 현장에서 활용한다는 측면에서 그 의의가 매우
-        크다.대전시교육청은 3일 대덕소프트웨어마이스터고등학교에서 '대전 학생 걷기
-        앱(App) 제작발표회'를 개최했다.대전시교육청과 대덕소프트웨어마이스터고,
-        대전체육교과연구회의 협업을 통해 전국 최초로 개발된 이 앱은 대전
-        학생들이 직접 제작하고 학교 현장에서 활용한다는 측면에서 그 의의가 매우
-        크다.
-      </S.P>
+      <S.P>{content ? content : "내용이 없습니다"}</S.P>
     </div>
   );
 }

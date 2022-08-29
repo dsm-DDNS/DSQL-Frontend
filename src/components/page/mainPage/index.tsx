@@ -3,9 +3,32 @@ import bannerImage from "../../../asset/img/banner.png";
 import SchoolPhoto from "./schoolPhoto";
 import SchoolPaper from "./schoolPaper";
 import Project from "./Project";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { BASE_URL } from "../../../lib/export/data";
+import { useEffect, useState } from "react";
 
 export default function MainPage() {
-  const developerName = ["김순호", "안진우", "남요셉", "이동현"];
+  const developerName: string[] = ["김순호", "안진우", "남요셉", "이동현"];
+  const pos = [0, 160, 0, 160];
+  const [project, setProject] = useState([]);
+
+  useEffect(() => {
+    const getProject = () => {
+      axios({
+        method: "GET",
+        url: BASE_URL + "/api/dsql/v1/project/full/list",
+        params: {
+          idx: 0,
+          size: 4,
+        },
+      }).then((res) => {
+        setProject(res.data.projectList);
+      });
+    };
+
+    getProject();
+  }, []);
 
   return (
     <>
@@ -39,18 +62,21 @@ export default function MainPage() {
           </S.Explain>
         </S.ExplainContainer>
         <S.ProjectList>
-          <div>
-            <Project color="#483B52" />
-          </div>
-          <div style={{ marginTop: "160px" }}>
-            <Project color="#310057" />
-          </div>
-          <div>
-            <Project color="#C59393" />
-          </div>
-          <div style={{ marginTop: "160px" }}>
-            <Project color="#006360" />
-          </div>
+          {project.map((item: any, i: number) => (
+            <S.Project marginNumber={pos[i]}>
+              <Project
+                img={item.imgList}
+                introduction={item.introduction}
+                startDate={item.startDate}
+                endDate={item.endDate}
+                devList={item.devList}
+                logo={item.logo.url}
+              />
+            </S.Project>
+          ))}
+          <S.View>
+            <Link to={"/list"}>View All</Link>
+          </S.View>
         </S.ProjectList>
         <S.ExplainContainer>
           <S.Explain
@@ -59,7 +85,11 @@ export default function MainPage() {
             DaedeokSoftwareMeisterHighSchool
           </S.Explain>
           <S.Explain
-            style={{ justifyContent: "flex-start", marginTop: "78px" }}
+            style={{
+              justifyContent: "flex-start",
+              marginTop: "78px",
+              opacity: "1",
+            }}
           >
             Developers
           </S.Explain>

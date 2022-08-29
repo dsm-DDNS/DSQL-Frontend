@@ -12,6 +12,8 @@ export const SchoolTitle = styled.div`
   display: flex;
   flex-direction: column;
   height: 300px;
+  font-family: "Gowun Batang", serif;
+
   hr {
     margin-left: 0px;
     width: 200px;
@@ -26,6 +28,8 @@ export const SchoolTitle = styled.div`
 export const SchoolName = styled.div`
   color: #c9c9c9;
   font-size: 30px;
+  opacity: 0.5;
+  font-family: "Gowun Batang", serif;
 `;
 
 export const SchoolMainTitle = styled.div`
@@ -36,7 +40,7 @@ export const SchoolMainTitle = styled.div`
 
 export const SchoolSubTitle = styled.div<{ size?: number }>`
   font-size: ${(props) => props.size + "px"};
-  color: #000;
+  color: #c9c9c9;
   text-align: center;
 `;
 
@@ -88,13 +92,16 @@ export const SchoolButton = styled.div`
   font-size: 20px;
   margin-bottom: 10px;
   margin-right: 24px;
-  color: #000;
+  color: #c9c9c9;
+  font-weight: bold;
+  font-family: "Gowun Batang", serif;
+
   a:link {
     text-decoration: none;
-    color: #000;
+    color: #c9c9c9;
   }
   a:visited {
-    color: #000;
+    color: #c9c9c9;
   }
 `;
 
@@ -105,4 +112,6 @@ export const SchoolExplain = styled.div`
   top: 37px;
   left: 0;
   font-size: 20px;
+  color: #c9c9c9;
+  font-family: "Song Myung", serif;
 `;
