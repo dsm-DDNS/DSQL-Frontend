@@ -11,6 +11,8 @@ export default function NewsPaper() {
     if (contents.length <= n) n = contents.length - 1;
     if (n < 0) n = 0;
     setCurrentSlide(n);
+
+    return;
   };
 
   useEffect(() => {
@@ -24,14 +26,18 @@ export default function NewsPaper() {
         },
       })
         .then((res) => {
-          console.log(res)
+          console.log(res);
           setContents(res.data.content);
         })
         .catch((err) => {
           console.log(err);
         });
+
+      return;
     };
     getNews();
+
+    return;
   }, []);
 
   return (
@@ -66,9 +72,7 @@ export default function NewsPaper() {
         )}
         <S.SchoolPaperContent>
           {contents.map((content: any, i: number) => (
-            <>
-              {currentSlide === i ? <div>{content.content}</div> : <></>}
-            </>
+            <>{currentSlide === i ? <div>{content.content}</div> : <></>}</>
           ))}
         </S.SchoolPaperContent>
         {currentSlide !== 0 ? (

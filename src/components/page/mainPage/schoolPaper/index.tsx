@@ -2,13 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from "./styles";
-import banner from "../../../../asset/img/banner.png";
 import { BASE_URL } from "../../../../lib/export/data";
 
 export default function SchoolPaper() {
   const [content, setContent] = useState<String>("");
-
-
 
   useEffect(() => {
     async function getLastNews() {
@@ -22,8 +19,12 @@ export default function SchoolPaper() {
         .catch((err) => {
           console.log(err);
         });
+
+      return;
     }
     getLastNews();
+
+    return;
   });
 
   return (

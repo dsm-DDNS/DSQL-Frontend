@@ -24,8 +24,12 @@ export default function SchoolPhoto() {
         .catch((err) => {
           console.log(err);
         });
+    
+        return;
     };
     getPhoto();
+    
+    return;
   }, []);
 
   return (

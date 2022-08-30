@@ -23,11 +23,15 @@ export default function ProjectList() {
         setCnt(cnt + 1);
         setScrolled(false);
       });
+    
+      return;
     };
 
     if (scrolled) {
       getProject();
     }
+    
+    return;
   }, [scrolled]);
 
   if (document) {

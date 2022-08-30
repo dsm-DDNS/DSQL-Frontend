@@ -12,6 +12,8 @@ export default function Project(props: any) {
     if (img.length <= n) n = 0;
     if (n < 0) n = img.length - 1;
     setCurrentSlide(n);
+    
+    return;
   };
 
   const pagination = () => {
@@ -32,12 +34,15 @@ export default function Project(props: any) {
         );
       }
     }
+
     return result;
   };
 
   const showPage = (i: number) => {
     setCurrentDevSlide(i);
     setShowDev(devList.slice(6 * i, 6 * (i + 1)));
+    
+    return;
   };
 
   return (

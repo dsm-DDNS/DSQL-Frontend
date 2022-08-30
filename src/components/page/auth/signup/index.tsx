@@ -15,7 +15,8 @@ export default function SignUp() {
 
   const dataInput = (e: any, props: string) => {
     setData({ ...data, [props]: e.target.value });
-    console.log(data);
+
+    return;
   };
 
   const name: string[][] = [
@@ -36,6 +37,8 @@ export default function SignUp() {
       .catch((err) => {
         console.log(err);
       });
+
+    return;
   }
 
   async function signUp() {
@@ -51,6 +54,8 @@ export default function SignUp() {
       .catch((err) => {
         console.log(err);
       });
+
+    return;
   }
 
   return (

@@ -87,14 +87,20 @@ export default function AdminPage() {
           confirmButtonText: "Ok",
         });
       });
+
+    return;
   };
 
   const newsInputChange = (props: string) => (e: any) => {
     setNewsData({ ...newsData, [props]: e.target.value });
+
+    return;
   };
 
   const projectInputChange = (props: string) => (e: any) => {
     setProjectData({ ...projectData, [props]: e.target.value });
+
+    return;
   };
 
   const [number, setNumber] = useState(0);
@@ -102,15 +108,19 @@ export default function AdminPage() {
   const devInputChange = (props: string, i: number) => (e: any) => {
     setDevData({ ...devData, [props]: e.target.value });
     setNumber(i);
+
+    return;
   };
 
   function urlInputChange(props: string, e: any, i: number) {
     setUrlInfo({ ...urlInfo, [props]: e.target.value });
     setNumber(i);
+
+    return;
   }
 
   async function projectPost() {
-    console.log(projectData)
+    console.log(projectData);
     if (showImage[0] !== "" && logoShowImage[0] !== "") {
       axios({
         method: "POST",
@@ -164,7 +174,7 @@ export default function AdminPage() {
           });
         })
         .catch((err) => {
-          console.log(err)
+          console.log(err);
           Swal.fire({
             title: "내용을 정확히 기재해주세요.",
             icon: "error",
@@ -178,6 +188,8 @@ export default function AdminPage() {
         confirmButtonText: "Ok",
       });
     }
+
+    return;
   }
 
   const addDev = () => {
@@ -201,12 +213,14 @@ export default function AdminPage() {
         url: "",
       },
     ]);
+    return;
   };
 
   useEffect(() => {
     setData(
       data.map((item: any, idx: number) => (idx === number ? devData : item))
     );
+    return;
   }, [devData]);
 
   useEffect(() => {
@@ -214,6 +228,7 @@ export default function AdminPage() {
       ...projectData,
       devList: data,
     });
+    return;
   }, [data]);
 
   useEffect(() => {
@@ -221,12 +236,14 @@ export default function AdminPage() {
       ...projectData,
       urlInfo: data2,
     });
+    return;
   }, [data2]);
 
   useEffect(() => {
     setData2(
       data2.map((item: any, idx: number) => (idx === number ? urlInfo : item))
     );
+    return;
   }, [urlInfo]);
 
   const [formData, setFormData] = useState(new FormData());
@@ -258,6 +275,7 @@ export default function AdminPage() {
         setLogoFormData(formData);
       }
     }
+    return;
   };
 
   return (

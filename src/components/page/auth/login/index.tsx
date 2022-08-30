@@ -11,6 +11,8 @@ export default function Login() {
 
   const dataInput = (e: any, props: string) => {
     setData({ ...data, [props]: e.target.value });
+    
+    return;
   };
 
   async function login() {
@@ -39,6 +41,8 @@ export default function Login() {
       .catch((err) => {
         console.log(err);
       });
+    
+      return;
   }
 
   return (

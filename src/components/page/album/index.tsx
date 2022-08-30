@@ -30,8 +30,12 @@ export default function PhotoAlbum() {
         .catch((err) => {
           console.log(err);
         });
+
+      return;
     };
     getPhoto();
+    
+    return;
   }, []);
 
   return (
