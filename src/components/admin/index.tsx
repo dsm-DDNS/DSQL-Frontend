@@ -174,16 +174,16 @@ export default function AdminPage() {
                 if (result.isConfirmed) {
                   window.location.reload();
                 }
-    
+
                 return;
               });
-    
+
               return;
             });
-    
+
             return;
           });
-    
+
           return;
         })
         .catch((err) => {
@@ -192,7 +192,7 @@ export default function AdminPage() {
             icon: "error",
             confirmButtonText: "Ok",
           });
-    
+
           return;
         });
     } else {
@@ -227,7 +227,7 @@ export default function AdminPage() {
         url: "",
       },
     ]);
-    
+
     return;
   };
 
@@ -329,7 +329,14 @@ export default function AdminPage() {
               onChange={newsInputChange("content")}
             />
           </S.InputPost>
-          <S.ButtonPost onClick={() => newsPost()}>Upload</S.ButtonPost>
+          <S.ButtonPost
+            onClick={() => {
+              newsPost();
+              return;
+            }}
+          >
+            Upload
+          </S.ButtonPost>
         </S.Bundle>
       </S.Post>
       <S.Post>
@@ -465,7 +472,10 @@ export default function AdminPage() {
               type="file"
               multiple
               accept="image/png, image/jpeg"
-              onChange={(e) => imgSelect("image", e)}
+              onChange={(e) => {
+                imgSelect("image", e);
+                return;
+              }}
             />
           </S.InputPost>
           <S.InputPost style={{ marginTop: "0px" }}>
@@ -483,7 +493,10 @@ export default function AdminPage() {
             <S.flieInput
               accept="image/png, image/jpeg"
               type="file"
-              onChange={(e) => imgSelect("logo", e)}
+              onChange={(e) => {
+                imgSelect("logo", e);
+                return;
+              }}
             />
           </S.InputPost>
           <S.ButtonPost onClick={() => projectPost()}>Upload</S.ButtonPost>

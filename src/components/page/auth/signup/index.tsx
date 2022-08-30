@@ -63,7 +63,14 @@ export default function SignUp() {
                 onChange={(e) => dataInput(e, item[1])}
               />
               {item[0] === "EMAIL" ? (
-                <S.SendBtn onClick={() => authentication()}>SEND</S.SendBtn>
+                <S.SendBtn
+                  onClick={() => {
+                    authentication();
+                    return;
+                  }}
+                >
+                  SEND
+                </S.SendBtn>
               ) : (
                 <></>
               )}
@@ -75,7 +82,14 @@ export default function SignUp() {
           <option value="STUDENT">STUDENT</option>
           <option value="TEACHER">TEACHER</option>
         </S.SignupSelect>
-        <S.SignUpBtn onClick={() => signUp()}>SignUp</S.SignUpBtn>
+        <S.SignUpBtn
+          onClick={() => {
+            signUp();
+            return;
+          }}
+        >
+          SignUp
+        </S.SignUpBtn>
       </S.SignUpDiv>
     </>
   );

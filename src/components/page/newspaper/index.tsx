@@ -52,7 +52,7 @@ export default function NewsPaper() {
       <S.Content>
         {currentSlide !== contents.length - 1 ? (
           <S.Slide
-            onClick={() => onChangeImage(currentSlide + 1)}
+            onClick={() => {onChangeImage(currentSlide + 1); return;}}
             style={{
               marginRight: "10px",
               backgroundColor: "rgba(255, 255, 255, 0.5)",
@@ -62,7 +62,7 @@ export default function NewsPaper() {
           </S.Slide>
         ) : (
           <S.Slide
-            onClick={() => onChangeImage(currentSlide + 1)}
+            onClick={() => {onChangeImage(currentSlide + 1); return;}}
             style={{
               marginRight: "10px",
             }}
@@ -75,7 +75,7 @@ export default function NewsPaper() {
         </S.SchoolPaperContent>
         {currentSlide !== 0 ? (
           <S.Slide
-            onClick={() => onChangeImage(currentSlide - 1)}
+            onClick={() => {onChangeImage(currentSlide - 1); return;}}
             style={{
               marginLeft: "10px",
               backgroundColor: "rgba(255, 255, 255, 0.5)",
@@ -85,7 +85,7 @@ export default function NewsPaper() {
           </S.Slide>
         ) : (
           <S.Slide
-            onClick={() => onChangeImage(currentSlide - 1)}
+            onClick={() => {onChangeImage(currentSlide - 1); return;}}
             style={{ marginLeft: "10px" }}
           />
         )}

@@ -49,7 +49,14 @@ export default function Login() {
         <S.LoginInput>
           <input placeholder="PASSWORD" onChange={(e) => dataInput(e, "pw")} />
         </S.LoginInput>
-        <S.LoginBtn onClick={() => login()}>LOGIN</S.LoginBtn>
+        <S.LoginBtn
+          onClick={() => {
+            login();
+            return;
+          }}
+        >
+          LOGIN
+        </S.LoginBtn>
       </S.LoginDiv>
     </>
   );

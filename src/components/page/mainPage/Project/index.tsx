@@ -54,7 +54,10 @@ export default function Project(props: any) {
         <S.ProjectContent>{introduction ? introduction : ""}</S.ProjectContent>
         <S.ProjectImage>
           <S.Slide
-            onClick={() => onChangeImage(currentSlide - 1)}
+            onClick={() => {
+              onChangeImage(currentSlide - 1);
+              return;
+            }}
             style={{ left: "-15px" }}
           >
             <div>‹</div>
@@ -69,7 +72,10 @@ export default function Project(props: any) {
             </>
           ))}
           <S.Slide
-            onClick={() => onChangeImage(currentSlide + 1)}
+            onClick={() => {
+              onChangeImage(currentSlide + 1);
+              return;
+            }}
             style={{ right: "-15px" }}
           >
             <div>›</div>

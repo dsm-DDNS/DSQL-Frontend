@@ -42,7 +42,6 @@ export default function ProjectList() {
       if (maxHeight) {
         if (maxHeight - 750 === document.getElementById("list")?.scrollTop) {
           setScrolled(true);
-          console.log("asd");
         }
       }
     });
