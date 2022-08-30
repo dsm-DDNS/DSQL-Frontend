@@ -12,7 +12,7 @@ export default function Project(props: any) {
     if (img.length <= n) n = 0;
     if (n < 0) n = img.length - 1;
     setCurrentSlide(n);
-    
+
     return;
   };
 
@@ -41,7 +41,7 @@ export default function Project(props: any) {
   const showPage = (i: number) => {
     setCurrentDevSlide(i);
     setShowDev(devList.slice(6 * i, 6 * (i + 1)));
-    
+
     return;
   };
 

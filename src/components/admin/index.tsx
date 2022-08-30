@@ -187,7 +187,6 @@ export default function AdminPage() {
           return;
         })
         .catch((err) => {
-          console.log(err);
           Swal.fire({
             title: "내용을 정확히 기재해주세요.",
             icon: "error",
@@ -228,6 +227,7 @@ export default function AdminPage() {
         url: "",
       },
     ]);
+    
     return;
   };
 

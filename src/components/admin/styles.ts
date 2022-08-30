@@ -10,7 +10,7 @@ export const Post = styled.div`
 
 export const Bundle = styled.div`
   position: absolute;
-  top: 100px
+  top: 100px;
 `;
 
 export const InputPost = styled.div`

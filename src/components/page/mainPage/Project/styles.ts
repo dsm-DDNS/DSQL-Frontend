@@ -89,7 +89,6 @@ export const Developer = styled.div`
   font-family: "Gowun Batang", serif;
 `;
 
-
 export const Period = styled.div`
   text-align: center;
   color: #ffffff;

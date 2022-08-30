@@ -1,5 +1,4 @@
 import * as S from "./styles";
-import logo from "../../../asset/img/logo.svg";
 
 export default function Header() {
   return (

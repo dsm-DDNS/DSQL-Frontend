@@ -22,17 +22,11 @@ export default function PhotoAlbum() {
         params: {
           size: 16,
         },
-      })
-        .then((res) => {
-          setPhoto(res.data.shortPostList);
+      }).then((res) => {
+        setPhoto(res.data.shortPostList);
 
-          return;
-        })
-        .catch((err) => {
-          console.log(err);
-
-          return;
-        });
+        return;
+      });
 
       return;
     };

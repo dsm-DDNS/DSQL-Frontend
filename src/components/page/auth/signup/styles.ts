@@ -79,7 +79,7 @@ export const SignupSelect = styled.select`
   padding-left: 30px;
   box-sizing: border-box;
   margin-bottom: 30px;
-  
+
   option {
     width: 600px;
     height: 70px;

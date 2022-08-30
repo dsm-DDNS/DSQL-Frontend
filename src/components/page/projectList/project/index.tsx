@@ -24,6 +24,7 @@ export default function Project(props: any) {
         );
       }
     }
+
     return result;
   };
 
@@ -31,14 +32,14 @@ export default function Project(props: any) {
     setCurrentSlide(i);
     setShowDev(devList.slice(6 * i, 6 * (i + 1)));
 
-    return
+    return;
   };
 
   return (
     <>
       <S.Project>
         <S.Logo>
-          <img src={logo ? logo.url: ""} alt="" />
+          <img src={logo ? logo.url : ""} alt="" />
         </S.Logo>
         <S.GridDiv>
           <S.PageImage>

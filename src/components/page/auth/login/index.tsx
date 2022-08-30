@@ -11,7 +11,7 @@ export default function Login() {
 
   const dataInput = (e: any, props: string) => {
     setData({ ...data, [props]: e.target.value });
-    
+
     return;
   };
 
@@ -24,29 +24,19 @@ export default function Login() {
         Accept: "application/json",
         "Content-Type": "application/json;charset=UTF-8",
       },
-    })
-      .then((res) => {
-        const { accessToken, refreshToken } = res.data;
+    }).then((res) => {
+      const { accessToken, refreshToken } = res.data;
 
-        axios.defaults.headers.common[
-          "Authorization"
-        ] = `Bearer ${accessToken}`;
+      axios.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
 
-        sessionStorage.setItem("accessToken", accessToken);
+      sessionStorage.setItem("accessToken", accessToken);
 
-        console.log(res);
+      window.location.href = "/";
 
-        window.location.href = "/";
-    
-        return;
-      })
-      .catch((err) => {
-        console.log(err);
-    
-        return;
-      });
-    
       return;
+    });
+
+    return;
   }
 
   return (

@@ -30,11 +30,6 @@ export default function NewsPaper() {
     
           return;
         })
-        .catch((err) => {
-          console.log(err);
-    
-          return;
-        });
 
       return;
     };

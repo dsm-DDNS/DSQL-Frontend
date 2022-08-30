@@ -16,23 +16,17 @@ export default function SchoolPhoto() {
         params: {
           size: 6,
         },
-      })
-        .then((res) => {
-          setContent(res.data.shortContent);
-          setPhoto(res.data.shortPostList.map((it: any) => it.imgList[0]));
-    
-          return;
-        })
-        .catch((err) => {
-          console.log(err);
-    
-          return;
-        });
-    
+      }).then((res) => {
+        setContent(res.data.shortContent);
+        setPhoto(res.data.shortPostList.map((it: any) => it.imgList[0]));
+
         return;
+      });
+
+      return;
     };
     getPhoto();
-    
+
     return;
   }, []);
 
@@ -51,9 +45,7 @@ export default function SchoolPhoto() {
         <S.SchoolButton>
           <Link to={"/photo"}>View All</Link>
         </S.SchoolButton>
-        <S.SchoolExplain>
-          {content}
-        </S.SchoolExplain>
+        <S.SchoolExplain>{content}</S.SchoolExplain>
         <S.SchoolGrid>
           {photo.map((item, i: number) => (
             <>

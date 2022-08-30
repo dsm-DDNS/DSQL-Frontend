@@ -12,17 +12,11 @@ export default function SchoolPaper() {
       axios({
         method: "GET",
         url: BASE_URL + "/api/dsql/v1/news/latest",
-      })
-        .then((res) => {
-          setContent(res.data.content);
-    
-          return;
-        })
-        .catch((err) => {
-          console.log(err);
-    
-          return;
-        });
+      }).then((res) => {
+        setContent(res.data.content);
+
+        return;
+      });
 
       return;
     }

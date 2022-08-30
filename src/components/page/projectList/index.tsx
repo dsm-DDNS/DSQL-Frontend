@@ -22,17 +22,17 @@ export default function ProjectList() {
         setProject((list) => list.concat(res.data.projectList));
         setCnt(cnt + 1);
         setScrolled(false);
-    
+
         return;
       });
-    
+
       return;
     };
 
     if (scrolled) {
       getProject();
     }
-    
+
     return;
   }, [scrolled]);
 

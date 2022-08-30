@@ -32,15 +32,7 @@ export default function SignUp() {
       method: "POST",
       url: BASE_URL + "/api/dsql/v1/auth/email",
       params: { email: data.email },
-    })
-      .then((res) => {
-        return;
-      })
-      .catch((err) => {
-        console.log(err);
-
-        return;
-      });
+    });
 
     return;
   }
@@ -50,18 +42,11 @@ export default function SignUp() {
       method: "POST",
       url: BASE_URL + "/api/dsql/v1/auth/signup",
       data: data,
-    })
-      .then((res) => {
-        console.log(res);
-        window.location.href = "/login";
-    
-        return;
-      })
-      .catch((err) => {
-        console.log(err);
-    
-        return;
-      });
+    }).then((res) => {
+      window.location.href = "/login";
+
+      return;
+    });
 
     return;
   }
