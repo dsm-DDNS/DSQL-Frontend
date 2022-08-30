@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/DSQL-Frontend/static/css/main.e6c13ad2.css",
+    "main.js": "/DSQL-Frontend/static/js/main.bcb59eab.js",
+    "static/js/787.3bb2b484.chunk.js": "/DSQL-Frontend/static/js/787.3bb2b484.chunk.js",
+    "static/media/banner.png": "/DSQL-Frontend/static/media/banner.e9ee1b710447907fba91.png",
+    "index.html": "/DSQL-Frontend/index.html",
+    "main.e6c13ad2.css.map": "/DSQL-Frontend/static/css/main.e6c13ad2.css.map",
+    "main.bcb59eab.js.map": "/DSQL-Frontend/static/js/main.bcb59eab.js.map",
+    "787.3bb2b484.chunk.js.map": "/DSQL-Frontend/static/js/787.3bb2b484.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.bcb59eab.js"
+  ]
+}
