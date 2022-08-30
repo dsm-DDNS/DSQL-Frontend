@@ -78,7 +78,11 @@ export default function AdminPage() {
               content: "",
             });
           }
+
+          return;
         });
+
+        return;
       })
       .catch(() => {
         Swal.fire({
@@ -86,6 +90,8 @@ export default function AdminPage() {
           icon: "error",
           confirmButtonText: "Ok",
         });
+
+        return;
       });
 
     return;
@@ -120,7 +126,6 @@ export default function AdminPage() {
   }
 
   async function projectPost() {
-    console.log(projectData);
     if (showImage[0] !== "" && logoShowImage[0] !== "") {
       axios({
         method: "POST",
@@ -169,9 +174,17 @@ export default function AdminPage() {
                 if (result.isConfirmed) {
                   window.location.reload();
                 }
+    
+                return;
               });
+    
+              return;
             });
+    
+            return;
           });
+    
+          return;
         })
         .catch((err) => {
           console.log(err);
@@ -180,6 +193,8 @@ export default function AdminPage() {
             icon: "error",
             confirmButtonText: "Ok",
           });
+    
+          return;
         });
     } else {
       Swal.fire({

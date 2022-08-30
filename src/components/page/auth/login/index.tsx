@@ -37,9 +37,13 @@ export default function Login() {
         console.log(res);
 
         window.location.href = "/";
+    
+        return;
       })
       .catch((err) => {
         console.log(err);
+    
+        return;
       });
     
       return;

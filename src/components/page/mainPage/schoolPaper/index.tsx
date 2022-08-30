@@ -15,9 +15,13 @@ export default function SchoolPaper() {
       })
         .then((res) => {
           setContent(res.data.content);
+    
+          return;
         })
         .catch((err) => {
           console.log(err);
+    
+          return;
         });
 
       return;

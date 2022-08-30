@@ -20,9 +20,13 @@ export default function SchoolPhoto() {
         .then((res) => {
           setContent(res.data.shortContent);
           setPhoto(res.data.shortPostList.map((it: any) => it.imgList[0]));
+    
+          return;
         })
         .catch((err) => {
           console.log(err);
+    
+          return;
         });
     
         return;

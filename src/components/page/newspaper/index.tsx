@@ -26,11 +26,14 @@ export default function NewsPaper() {
         },
       })
         .then((res) => {
-          console.log(res);
           setContents(res.data.content);
+    
+          return;
         })
         .catch((err) => {
           console.log(err);
+    
+          return;
         });
 
       return;
