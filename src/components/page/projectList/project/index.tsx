@@ -15,24 +15,11 @@ export default function Project(props: any) {
       for (let i = 0; i < len; i++) {
         result.push(
           i === currentSlide ? (
-            <span
-              style={{ color: "#fff" }}
-              onClick={() => {
-                showPage(i);
-                return;
-              }}
-            >
+            <span style={{ color: "#fff" }} onClick={() => showPage(i)}>
               •
             </span>
           ) : (
-            <span
-              onClick={() => {
-                showPage(i);
-                return;
-              }}
-            >
-              •
-            </span>
+            <span onClick={() => showPage(i)}>•</span>
           )
         );
       }
@@ -45,8 +32,6 @@ export default function Project(props: any) {
     console.log(i);
     setCurrentSlide(i);
     setShowDev(devList.slice(6 * i, 6 * (i + 1)));
-
-    return;
   };
 
   return (

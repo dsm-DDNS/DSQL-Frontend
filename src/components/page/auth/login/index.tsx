@@ -11,8 +11,6 @@ export default function Login() {
 
   const dataInput = (e: any, props: string) => {
     setData({ ...data, [props]: e.target.value });
-
-    return;
   };
 
   async function login() {
@@ -32,11 +30,7 @@ export default function Login() {
       sessionStorage.setItem("accessToken", accessToken);
 
       window.location.href = "/";
-
-      return;
     });
-
-    return;
   }
 
   return (
@@ -49,14 +43,7 @@ export default function Login() {
         <S.LoginInput>
           <input placeholder="PASSWORD" onChange={(e) => dataInput(e, "pw")} />
         </S.LoginInput>
-        <S.LoginBtn
-          onClick={() => {
-            login();
-            return;
-          }}
-        >
-          LOGIN
-        </S.LoginBtn>
+        <S.LoginBtn onClick={() => login()}>LOGIN</S.LoginBtn>
       </S.LoginDiv>
     </>
   );

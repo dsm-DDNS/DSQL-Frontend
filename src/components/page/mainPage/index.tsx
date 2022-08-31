@@ -24,15 +24,9 @@ export default function MainPage() {
         },
       }).then((res) => {
         setProject(res.data.projectList);
-
-        return;
       });
-
-      return;
     };
     getProject();
-
-    return;
   }, []);
 
   return (

@@ -78,11 +78,7 @@ export default function AdminPage() {
               content: "",
             });
           }
-
-          return;
         });
-
-        return;
       })
       .catch(() => {
         Swal.fire({
@@ -90,23 +86,15 @@ export default function AdminPage() {
           icon: "error",
           confirmButtonText: "Ok",
         });
-
-        return;
       });
-
-    return;
   };
 
   const newsInputChange = (props: string) => (e: any) => {
     setNewsData({ ...newsData, [props]: e.target.value });
-
-    return;
   };
 
   const projectInputChange = (props: string) => (e: any) => {
     setProjectData({ ...projectData, [props]: e.target.value });
-
-    return;
   };
 
   const [number, setNumber] = useState(0);
@@ -114,15 +102,11 @@ export default function AdminPage() {
   const devInputChange = (props: string, i: number) => (e: any) => {
     setDevData({ ...devData, [props]: e.target.value });
     setNumber(i);
-
-    return;
   };
 
   function urlInputChange(props: string, e: any, i: number) {
     setUrlInfo({ ...urlInfo, [props]: e.target.value });
     setNumber(i);
-
-    return;
   }
 
   async function projectPost() {
@@ -174,17 +158,9 @@ export default function AdminPage() {
                 if (result.isConfirmed) {
                   window.location.reload();
                 }
-
-                return;
               });
-
-              return;
             });
-
-            return;
           });
-
-          return;
         })
         .catch((err) => {
           Swal.fire({
@@ -192,8 +168,6 @@ export default function AdminPage() {
             icon: "error",
             confirmButtonText: "Ok",
           });
-
-          return;
         });
     } else {
       Swal.fire({
@@ -202,8 +176,6 @@ export default function AdminPage() {
         confirmButtonText: "Ok",
       });
     }
-
-    return;
   }
 
   const addDev = () => {
@@ -227,15 +199,12 @@ export default function AdminPage() {
         url: "",
       },
     ]);
-
-    return;
   };
 
   useEffect(() => {
     setData(
       data.map((item: any, idx: number) => (idx === number ? devData : item))
     );
-    return;
   }, [devData]);
 
   useEffect(() => {
@@ -243,7 +212,6 @@ export default function AdminPage() {
       ...projectData,
       devList: data,
     });
-    return;
   }, [data]);
 
   useEffect(() => {
@@ -251,14 +219,12 @@ export default function AdminPage() {
       ...projectData,
       urlInfo: data2,
     });
-    return;
   }, [data2]);
 
   useEffect(() => {
     setData2(
       data2.map((item: any, idx: number) => (idx === number ? urlInfo : item))
     );
-    return;
   }, [urlInfo]);
 
   const [formData, setFormData] = useState(new FormData());
@@ -290,7 +256,6 @@ export default function AdminPage() {
         setLogoFormData(formData);
       }
     }
-    return;
   };
 
   return (
@@ -329,14 +294,7 @@ export default function AdminPage() {
               onChange={newsInputChange("content")}
             />
           </S.InputPost>
-          <S.ButtonPost
-            onClick={() => {
-              newsPost();
-              return;
-            }}
-          >
-            Upload
-          </S.ButtonPost>
+          <S.ButtonPost onClick={() => newsPost()}>Upload</S.ButtonPost>
         </S.Bundle>
       </S.Post>
       <S.Post>
@@ -472,10 +430,7 @@ export default function AdminPage() {
               type="file"
               multiple
               accept="image/png, image/jpeg"
-              onChange={(e) => {
-                imgSelect("image", e);
-                return;
-              }}
+              onChange={(e) => imgSelect("image", e)}
             />
           </S.InputPost>
           <S.InputPost style={{ marginTop: "0px" }}>
@@ -493,10 +448,7 @@ export default function AdminPage() {
             <S.flieInput
               accept="image/png, image/jpeg"
               type="file"
-              onChange={(e) => {
-                imgSelect("logo", e);
-                return;
-              }}
+              onChange={(e) => imgSelect("logo", e)}
             />
           </S.InputPost>
           <S.ButtonPost onClick={() => projectPost()}>Upload</S.ButtonPost>

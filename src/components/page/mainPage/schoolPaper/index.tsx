@@ -14,15 +14,9 @@ export default function SchoolPaper() {
         url: BASE_URL + "/api/dsql/v1/news/latest",
       }).then((res) => {
         setContent(res.data.content);
-
-        return;
       });
-
-      return;
     }
     getLastNews();
-
-    return;
   });
 
   return (

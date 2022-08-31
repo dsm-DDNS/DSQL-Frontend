@@ -15,8 +15,6 @@ export default function SignUp() {
 
   const dataInput = (e: any, props: string) => {
     setData({ ...data, [props]: e.target.value });
-
-    return;
   };
 
   const name: string[][] = [
@@ -33,8 +31,6 @@ export default function SignUp() {
       url: BASE_URL + "/api/dsql/v1/auth/email",
       params: { email: data.email },
     });
-
-    return;
   }
 
   async function signUp() {
@@ -44,11 +40,7 @@ export default function SignUp() {
       data: data,
     }).then((res) => {
       window.location.href = "/login";
-
-      return;
     });
-
-    return;
   }
 
   return (
@@ -63,14 +55,7 @@ export default function SignUp() {
                 onChange={(e) => dataInput(e, item[1])}
               />
               {item[0] === "EMAIL" ? (
-                <S.SendBtn
-                  onClick={() => {
-                    authentication();
-                    return;
-                  }}
-                >
-                  SEND
-                </S.SendBtn>
+                <S.SendBtn onClick={() => authentication()}>SEND</S.SendBtn>
               ) : (
                 <></>
               )}
@@ -82,14 +67,7 @@ export default function SignUp() {
           <option value="STUDENT">STUDENT</option>
           <option value="TEACHER">TEACHER</option>
         </S.SignupSelect>
-        <S.SignUpBtn
-          onClick={() => {
-            signUp();
-            return;
-          }}
-        >
-          SignUp
-        </S.SignUpBtn>
+        <S.SignUpBtn onClick={() => signUp()}>SignUp</S.SignUpBtn>
       </S.SignUpDiv>
     </>
   );

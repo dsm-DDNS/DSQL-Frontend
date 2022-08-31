@@ -12,8 +12,6 @@ export default function Project(props: any) {
     if (img.length <= n) n = 0;
     if (n < 0) n = img.length - 1;
     setCurrentSlide(n);
-
-    return;
   };
 
   const pagination = () => {
@@ -41,8 +39,6 @@ export default function Project(props: any) {
   const showPage = (i: number) => {
     setCurrentDevSlide(i);
     setShowDev(devList.slice(6 * i, 6 * (i + 1)));
-
-    return;
   };
 
   return (
@@ -54,10 +50,7 @@ export default function Project(props: any) {
         <S.ProjectContent>{introduction ? introduction : ""}</S.ProjectContent>
         <S.ProjectImage>
           <S.Slide
-            onClick={() => {
-              onChangeImage(currentSlide - 1);
-              return;
-            }}
+            onClick={() => onChangeImage(currentSlide - 1)}
             style={{ left: "-15px" }}
           >
             <div>‹</div>
@@ -72,10 +65,7 @@ export default function Project(props: any) {
             </>
           ))}
           <S.Slide
-            onClick={() => {
-              onChangeImage(currentSlide + 1);
-              return;
-            }}
+            onClick={() => onChangeImage(currentSlide + 1)}
             style={{ right: "-15px" }}
           >
             <div>›</div>

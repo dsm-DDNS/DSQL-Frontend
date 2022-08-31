@@ -24,15 +24,9 @@ export default function PhotoAlbum() {
         },
       }).then((res) => {
         setPhoto(res.data.shortPostList);
-
-        return;
       });
-
-      return;
     };
     getPhoto();
-
-    return;
   }, []);
 
   return (
