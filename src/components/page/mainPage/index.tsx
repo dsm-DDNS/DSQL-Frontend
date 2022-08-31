@@ -2,7 +2,7 @@ import * as S from "./styles";
 import bannerImage from "../../../asset/img/banner.png";
 import SchoolPhoto from "./schoolPhoto";
 import SchoolPaper from "./schoolPaper";
-import Project from "./Project";
+import Project from "./project";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../../lib/export/data";
