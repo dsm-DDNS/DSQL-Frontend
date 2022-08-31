@@ -2,7 +2,7 @@ import * as S from "./styles";
 import bannerImage from "../../../asset/img/banner.png";
 import SchoolPhoto from "./schoolPhoto";
 import SchoolPaper from "./schoolPaper";
-import Project from "./project";
+import Projects from "./project";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../../lib/export/data";
@@ -63,7 +63,7 @@ export default function MainPage() {
         <S.ProjectList>
           {project.map((item: any, i: number) => (
             <S.Project marginNumber={pos[i]}>
-              <Project
+              <Projects
                 img={item.imgList}
                 introduction={item.introduction}
                 startDate={item.startDate}

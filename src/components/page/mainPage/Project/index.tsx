@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as S from "./styles";
 
-export default function Project(props: any) {
+export default function Projects(props: any) {
   const { img, introduction, startDate, endDate, devList, logo } = props;
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [currentDevSlide, setCurrentDevSlide] = useState<number>(0);
