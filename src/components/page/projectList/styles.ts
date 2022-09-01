@@ -28,7 +28,7 @@ export const List = styled.div`
   overflow: hidden;
   overflow: scroll;
   overflow-x: hidden;
-  margin-top: 50px;
+  margin-top: 140px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 27px;

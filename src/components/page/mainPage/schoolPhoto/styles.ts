@@ -5,6 +5,7 @@ export const School = styled.div`
   box-sizing: border-box;
   display: inline-flex;
   justify-content: space-between;
+  scroll-snap-align: start;
 `;
 
 export const SchoolTitle = styled.div`

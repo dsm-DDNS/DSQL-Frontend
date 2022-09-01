@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SchoolPaper = styled.div`
-  height: 830px;
+  height: 730px;
   width: 100%;
   padding: 0px 74px 0px 78px;
   box-sizing: border-box;
@@ -33,7 +33,7 @@ export const SchoolPaperTitle = styled.div`
 
 export const SchoolPaperContent = styled.div`
   width: 704px;
-  height: 800px;
+  height: 700px;
   overflow: hidden;
   overflow: scroll;
   overflow-x: hidden;

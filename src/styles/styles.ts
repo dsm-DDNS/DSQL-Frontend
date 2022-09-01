@@ -5,10 +5,15 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: #262626;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 937px;
     &::-webkit-scrollbar {
-    background-color: #262626;
+    /* background-color: #262626;
     width: 10px;
+     */
+    display: none;
   }
   &::-webkit-scrollbar-thumb {
     background-color: #C9C9C9;

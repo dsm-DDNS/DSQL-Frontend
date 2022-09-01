@@ -6,7 +6,7 @@ export const PostDiv = styled.div`
   grid-row-gap: 55px;
   grid-column-gap: 30px;
   width: 1522px;
-  height: 730px;
+  height: 680px;
   overflow: hidden;
   overflow: scroll;
   overflow-x: hidden;

@@ -18,7 +18,7 @@ export const SubDiv = styled.div`
   transform: rotate(90deg);
   position: absolute;
   left: -50px;
-  top: 230px;
+  top: 310px;
   hr {
     margin-left: 0px;
     width: 200px;
@@ -33,6 +33,7 @@ export const ExplainContainer = styled.div`
   box-sizing: border-box;
   position: relative;
   margin-bottom: 30px;
+  margin-top: 90px;
 `;
 
 export const Explain = styled.div`

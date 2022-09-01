@@ -33,10 +33,11 @@ export default function Header() {
         </defs>
         <text
           id="DSQL"
-          transform="translate(871 76)"
+          transform="translate(880 76)"
           fill="#a582c2"
           font-size="70"
-          font-family="SegoeUI, Segoe UI"
+          fontWeight={900}
+          font-family="Gowun Batang"
         >
           <tspan x="0" y="0">
             DSQL

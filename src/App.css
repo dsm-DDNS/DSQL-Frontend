@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  /* overflow: auto;
+  scroll-snap-type: y mandatory; */
+  height: 937px;
+}

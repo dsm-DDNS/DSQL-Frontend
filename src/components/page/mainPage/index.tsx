@@ -1,5 +1,4 @@
 import * as S from "./styles";
-import bannerImage from "../../../asset/img/banner.png";
 import SchoolPhoto from "./schoolPhoto";
 import SchoolPaper from "./schoolPaper";
 import Projects from "./project";
@@ -9,8 +8,8 @@ import { BASE_URL } from "../../../lib/export/data";
 import { useEffect, useState } from "react";
 
 export default function MainPage() {
-  const developerName: string[] = ["김순호", "안진우", "남요셉", "이동현"];
-  const pos = [0, 160, 0, 160];
+  const developerName: string[] = ["이동현", "안진우", "남요셉", "김순호"];
+  const pos = [0, 70, 0, 70];
   const [project, setProject] = useState([]);
 
   useEffect(() => {
@@ -32,22 +31,33 @@ export default function MainPage() {
   return (
     <>
       <S.MainDiv>
-        <S.Banner>
-          <img src={bannerImage} alt="banner" />
-        </S.Banner>
+        <S.Banner />
         <SchoolPhoto />
         <S.ExplainContainer>
-          <S.Explain style={{ justifyContent: "flex-start" }}>
+          <div
+            style={{
+              marginTop: "146px",
+              scrollSnapAlign: "start",
+            }}
+          >
+            ㅤ
+          </div>
+          <S.Explain
+            style={{
+              justifyContent: "flex-start",
+              marginTop: "86px",
+            }}
+          >
             DaeDeck NewS
           </S.Explain>
-          <S.Explain style={{ justifyContent: "flex-end" }}>
+          {/* <S.Explain style={{ justifyContent: "flex-end" }}>
             DDNS Serve information Quickest with Liability
           </S.Explain>
           <S.Explain
             style={{ justifyContent: "flex-start", marginTop: "146px" }}
           >
             DaeDeck NewS
-          </S.Explain>
+          </S.Explain> */}
         </S.ExplainContainer>
         <SchoolPaper />
         <S.ExplainContainer>
@@ -56,8 +66,16 @@ export default function MainPage() {
           >
             DDNS Serve information Quickest with Liability
           </S.Explain>
-          <S.Explain style={{ justifyContent: "flex-end" }}>
-            DaeDeck NewS
+          <div
+            style={{
+              marginTop: "146px",
+              scrollSnapAlign: "start",
+            }}
+          >
+            ㅤ
+          </div>
+          <S.Explain style={{ justifyContent: "flex-end", marginTop: "86px" }}>
+            DaeDeck ProjectList
           </S.Explain>
         </S.ExplainContainer>
         <S.ProjectList>
@@ -79,7 +97,11 @@ export default function MainPage() {
         </S.ProjectList>
         <S.ExplainContainer>
           <S.Explain
-            style={{ justifyContent: "flex-start", marginTop: "114px" }}
+            style={{
+              justifyContent: "flex-start",
+              marginTop: "114px",
+              scrollSnapAlign: "start",
+            }}
           >
             DaedeokSoftwareMeisterHighSchool
           </S.Explain>

@@ -1,17 +1,24 @@
 import styled from "styled-components";
+import bannerImage from "../../../asset/img/banner.png";
 
 export const MainDiv = styled.div`
-  width: 100%;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  height: 937px;
+  /* overflow-y: hidden; */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Banner = styled.div`
   width: 100%;
-  height: 1000px;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  height: 937px;
+  scroll-snap-align: start;
+  background-image: url(${bannerImage});
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 `;
 
 export const View = styled.div`
@@ -19,7 +26,7 @@ export const View = styled.div`
   justify-content: flex-end;
   position: absolute;
   right: 150px;
-  top: 110px;
+  top: 30px;
   font-size: 20px;
   color: #c9c9c9;
   font-family: "Gowun Batang", serif;
