@@ -1,7 +1,7 @@
 import * as S from "./styles";
 import SchoolPhoto from "./schoolPhoto";
+import Project from "./projects";
 import SchoolPaper from "./schoolPaper";
-import Projects from "./project";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../../lib/export/data";
@@ -78,10 +78,10 @@ export default function MainPage() {
             DaeDeck ProjectList
           </S.Explain>
         </S.ExplainContainer>
-        {/* <S.ProjectList>
+        <S.ProjectList>
           {project.map((item: any, i: number) => (
             <S.Project marginNumber={pos[i]}>
-              <Projects
+              <Project
                 img={item.imgList}
                 introduction={item.introduction}
                 startDate={item.startDate}
@@ -94,7 +94,7 @@ export default function MainPage() {
           <S.View>
             <Link to={"/list"}>View All</Link>
           </S.View>
-        </S.ProjectList> */}
+        </S.ProjectList>
         <S.ExplainContainer>
           <S.Explain
             style={{
