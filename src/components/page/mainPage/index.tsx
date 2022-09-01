@@ -12,21 +12,21 @@ export default function MainPage() {
   const pos = [0, 70, 0, 70];
   const [project, setProject] = useState([]);
 
-  // useEffect(() => {
-  //   const getProject = () => {
-  //     axios({
-  //       method: "GET",
-  //       url: BASE_URL + "/api/dsql/v1/project/full/list",
-  //       params: {
-  //         idx: 0,
-  //         size: 4,
-  //       },
-  //     }).then((res) => {
-  //       setProject(res.data.projectList);
-  //     });
-  //   };
-  //   getProject();
-  // }, []);
+  useEffect(() => {
+    const getProject = () => {
+      axios({
+        method: "GET",
+        url: BASE_URL + "/api/dsql/v1/project/full/list",
+        params: {
+          idx: 0,
+          size: 4,
+        },
+      }).then((res) => {
+        setProject(res.data.projectList);
+      });
+    };
+    getProject();
+  }, []);
 
   return (
     <>
@@ -59,7 +59,7 @@ export default function MainPage() {
             DaeDeck NewS
           </S.Explain> */}
         </S.ExplainContainer>
-        {/* <SchoolPaper /> */}
+        <SchoolPaper />
         <S.ExplainContainer>
           <S.Explain
             style={{ justifyContent: "flex-start", marginBottom: "146px" }}

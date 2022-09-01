@@ -8,12 +8,6 @@ function App() {
     <>
       <GlobalStyle />
       <Router />
-      {/* <div className="scroll-container">
-        <div className="scroll-area">1</div>
-        <div className="scroll-area">2</div>
-        <div className="scroll-area">3</div>
-        <div className="scroll-area">4</div>
-      </div> */}
     </>
   );
 }

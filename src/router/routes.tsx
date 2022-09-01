@@ -16,11 +16,11 @@ export default function Router() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           {/* <Route path="/photo" element={<PhotoAlbum />} /> */}
-          {/* <Route path="/list" element={<ProjectList />} />
+          <Route path="/list" element={<ProjectList />} />
           <Route path="/paper" element={<NewsPaper />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
-          <Route path="/admin" element={<AdminPage />} /> */}
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </BrowserRouter>
     </>
