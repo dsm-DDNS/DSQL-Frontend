@@ -14,27 +14,27 @@ export default function Project(props: any) {
     setCurrentSlide(n);
   };
 
-//   const pagination = () => {
-//     const result = [<span>ㅤ</span>];
-//     const len = parseInt(`${devList.length / 6 + 1}`);
+  const pagination = () => {
+    const result = [<span>ㅤ</span>];
+    const len = parseInt(`${devList.length / 6 + 1}`);
 
-//     if (len - 1) {
-//       result.pop();
-//       for (let i = 0; i < len; i++) {
-//         result.push(
-//           i === currentDevSlide ? (
-//             <span style={{ color: "#fff" }} onClick={() => showPage(i)}>
-//               •
-//             </span>
-//           ) : (
-//             <span onClick={() => showPage(i)}>•</span>
-//           )
-//         );
-//       }
-//     }
+    if (len - 1) {
+      result.pop();
+      for (let i = 0; i < len; i++) {
+        result.push(
+          i === currentDevSlide ? (
+            <span style={{ color: "#fff" }} onClick={() => showPage(i)}>
+              •
+            </span>
+          ) : (
+            <span onClick={() => showPage(i)}>•</span>
+          )
+        );
+      }
+    }
 
-//     return result;
-//   };
+    return result;
+  };
 
   const showPage = (i: number) => {
     setCurrentDevSlide(i);
@@ -80,7 +80,7 @@ export default function Project(props: any) {
               </S.Developer>
             ))}
           </S.DeveloperList>
-          {/* <S.Pagination>{pagination()}</S.Pagination> */}
+          <S.Pagination>{pagination()}</S.Pagination>
         </S.ShowDev>
         <S.Period>
           {startDate ? startDate : ""} ~ {endDate ? endDate : " "}

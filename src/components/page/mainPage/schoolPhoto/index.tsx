@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 export default function SchoolPhoto() {
   const [photo, setPhoto] = useState<string[]>([
     "https://dsmhs.djsch.kr//upload/edit/20201127/IMG_085251.jpg",
-    "https://dsmhs.djsch.kr/upload/edit/20220426/IMG_091418.jpeg",
     "https://dsmhs.djsch.kr/upload/edit/20211018/IMG_150309.jpg",
+    "https://dsmhs.djsch.kr/upload/edit/20220426/IMG_091418.jpeg",
     "https://dsmhs.djsch.kr//upload/edit/20190926/IMG_193039.jpg",
     "https://dsmhs.djsch.kr/upload/edit/20220426/IMG_161514.jpg",
     "https://dsmhs.djsch.kr/upload/edit/20211020/IMG_141406.jpg",

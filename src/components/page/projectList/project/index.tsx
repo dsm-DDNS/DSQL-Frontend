@@ -6,27 +6,27 @@ export default function Project(props: any) {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [showDev, setShowDev] = useState(devList.slice(0, 6));
 
-  // const pagination = () => {
-  //   const result = [<span>ㅤ</span>];
-  //   const len = parseInt(`${devList.length / 6 + 1}`);
+  const pagination = () => {
+    const result = [<span>ㅤ</span>];
+    const len = parseInt(`${devList.length / 6 + 1}`);
 
-  //   if (len - 1) {
-  //     result.pop();
-  //     for (let i = 0; i < len; i++) {
-  //       result.push(
-  //         i === currentSlide ? (
-  //           <span style={{ color: "#fff" }} onClick={() => showPage(i)}>
-  //             •
-  //           </span>
-  //         ) : (
-  //           <span onClick={() => showPage(i)}>•</span>
-  //         )
-  //       );
-  //     }
-  //   }
+    if (len - 1) {
+      result.pop();
+      for (let i = 0; i < len; i++) {
+        result.push(
+          i === currentSlide ? (
+            <span style={{ color: "#fff" }} onClick={() => showPage(i)}>
+              •
+            </span>
+          ) : (
+            <span onClick={() => showPage(i)}>•</span>
+          )
+        );
+      }
+    }
 
-  //   return result;
-  // };
+    return result;
+  };
 
   const showPage = (i: number) => {
     console.log(i);
@@ -53,7 +53,7 @@ export default function Project(props: any) {
                 </S.Developer>
               ))}
             </S.DeveloperList>
-            {/* <S.Pagination>{pagination()}</S.Pagination> */}
+            <S.Pagination>{pagination()}</S.Pagination>
           </S.ShowDev>
           <S.Content>{content ? content : ""}</S.Content>
           <S.Period>
