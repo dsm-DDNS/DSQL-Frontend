@@ -31,7 +31,7 @@ export default function MainPage() {
   return (
     <>
       <S.MainDiv>
-        <S.Banner />
+        <S.Banner id="banner" />
         <SchoolPhoto />
         <S.ExplainContainer>
           <div
@@ -39,6 +39,7 @@ export default function MainPage() {
               marginTop: "146px",
               scrollSnapAlign: "start",
             }}
+            id="news"
           >
             ㅤ
           </div>
@@ -71,6 +72,7 @@ export default function MainPage() {
               marginTop: "146px",
               scrollSnapAlign: "start",
             }}
+            id="project"
           >
             ㅤ
           </div>
@@ -102,6 +104,7 @@ export default function MainPage() {
               marginTop: "114px",
               scrollSnapAlign: "start",
             }}
+            id="develop"
           >
             DaedeokSoftwareMeisterHighSchool
           </S.Explain>

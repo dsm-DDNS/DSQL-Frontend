@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const School = styled.div`
   width: 100%;
   padding: 166px 100px 90px 126px;

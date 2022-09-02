@@ -4,6 +4,7 @@ import bannerImage from "../../../asset/img/banner.png";
 export const MainDiv = styled.div`
   overflow: auto;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   height: 937px;
   /* overflow-y: hidden; */
   &::-webkit-scrollbar {
@@ -19,6 +20,7 @@ export const Banner = styled.div`
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  scroll-snap-align: start;
 `;
 
 export const View = styled.div`

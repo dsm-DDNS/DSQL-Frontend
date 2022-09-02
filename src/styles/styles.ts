@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 3px;
     width: 10px;
   }
+    scroll-behavior: smooth;
+  }
+  html {
+    scroll-behavior: smooth;
   }
 `;
 

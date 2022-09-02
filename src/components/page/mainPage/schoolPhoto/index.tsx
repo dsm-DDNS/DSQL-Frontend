@@ -32,7 +32,7 @@ export default function SchoolPhoto() {
   // }, []);
 
   return (
-    <S.School>
+    <S.School id="photo">
       <S.SchoolTitle>
         <S.SchoolName>DaeDeokSoftwareMeisterHighSchool</S.SchoolName>
         <S.SchoolMainTitle>
