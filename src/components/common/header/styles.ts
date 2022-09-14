@@ -19,7 +19,7 @@ export const Sections = styled.span`
     margin-right: 20px;
     color: #c9c9c9;
     font-family: "Gowun Batang", serif;
-    font-size: 18px;
+    font-size: 19px;
     text-decoration: none;
   }
 `;
