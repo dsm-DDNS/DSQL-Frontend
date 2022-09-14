@@ -148,6 +148,8 @@ export default function Header() {
         <a href="#news">news</a>
         <a href="#project">project</a>
         <a href="#develop">develop</a>
+        <a href="/login">login</a>
+        <a href="/signup">signup</a>
       </S.Sections>
     </S.HeaderDiv>
   );
