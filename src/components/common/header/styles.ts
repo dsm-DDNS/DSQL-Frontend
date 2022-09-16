@@ -14,6 +14,8 @@ export const HeaderDiv = styled.div`
 export const Sections = styled.span`
   margin-bottom: 15px;
   margin-right: 20px;
+  text-align: end;
+  margin-top: 1000px;
 
   a {
     margin-right: 20px;
