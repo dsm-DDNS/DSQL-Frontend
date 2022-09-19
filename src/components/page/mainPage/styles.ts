@@ -15,6 +15,10 @@ export const MainDiv = styled.div`
   z-index: 2;
 `;
 
+export const Background = styled.div`
+  background-color: #000;
+`;
+
 export const Banner = styled.div`
   width: 100%;
   height: 100vh;
@@ -35,9 +39,16 @@ export const Banner = styled.div`
     color: #c9c9c9;
 
     p {
+      opacity: 1;
       text-align: center;
     }
   }
+`;
+
+export const ProjectContainer = styled.div`
+  background-color: #c9c9c9;
+  margin-top: 146px;
+  height: 125vh;
 `;
 
 export const Title = styled.a`

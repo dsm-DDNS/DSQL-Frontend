@@ -9,6 +9,7 @@ export const HeaderDiv = styled.div`
   display: inline-flex;
   justify-content: space-between;
   align-items: flex-end;
+  /* mix-blend-mode: difference; */
 `;
 
 export const Sections = styled.span`

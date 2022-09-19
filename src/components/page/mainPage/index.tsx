@@ -31,17 +31,19 @@ export default function MainPage() {
   return (
     <>
       <S.MainDiv>
-        <S.Banner id="banner">
-          <div>
-            <p>
-              <S.Title>DSQL</S.Title>
-              <br />
-              <S.Description>
-                DDNS Serve information Quickest with Liability
-              </S.Description>
-            </p>
-          </div>
-        </S.Banner>
+        <S.Background>
+          <S.Banner id="banner">
+            <div>
+              <p>
+                <S.Title>DSQL</S.Title>
+                <br />
+                <S.Description>
+                  DDNS Serve information Quickest with Liability
+                </S.Description>
+              </p>
+            </div>
+          </S.Banner>
+        </S.Background>
         <SchoolPhoto />
         <S.ExplainContainer>
           <div
@@ -71,42 +73,46 @@ export default function MainPage() {
           </S.Explain> */}
         </S.ExplainContainer>
         <SchoolPaper />
-        <S.ExplainContainer>
-          <S.Explain
-            style={{ justifyContent: "flex-start", marginBottom: "146px" }}
-          >
-            DDNS Serve information Quickest with Liability
-          </S.Explain>
-          <div
-            style={{
-              marginTop: "146px",
-              scrollSnapAlign: "start",
-            }}
-            id="project"
-          >
-            ㅤ
-          </div>
-          <S.Explain style={{ justifyContent: "flex-end", marginTop: "86px" }}>
-            DaeDeck ProjectList
-          </S.Explain>
-        </S.ExplainContainer>
-        <S.ProjectList>
-          {project.map((item: any, i: number) => (
-            <S.Project marginNumber={pos[i]}>
-              <Project
-                img={item.imgList}
-                introduction={item.introduction}
-                startDate={item.startDate}
-                endDate={item.endDate}
-                devList={item.devList}
-                logo={item.logo.url}
-              />
-            </S.Project>
-          ))}
-          <S.View>
-            <Link to={"/list"}>View All</Link>
-          </S.View>
-        </S.ProjectList>
+        <S.ProjectContainer>
+          <S.ExplainContainer>
+            <S.Explain
+              style={{ justifyContent: "flex-start", marginBottom: "146px" }}
+            >
+              DDNS Serve information Quickest with Liability
+            </S.Explain>
+            <div
+              style={{
+                marginTop: "146px",
+                scrollSnapAlign: "start",
+              }}
+              id="project"
+            >
+              ㅤ
+            </div>
+            <S.Explain
+              style={{ justifyContent: "flex-end", marginTop: "86px" }}
+            >
+              DaeDeck ProjectList
+            </S.Explain>
+          </S.ExplainContainer>
+          <S.ProjectList>
+            {project.map((item: any, i: number) => (
+              <S.Project marginNumber={pos[i]}>
+                <Project
+                  img={item.imgList}
+                  introduction={item.introduction}
+                  startDate={item.startDate}
+                  endDate={item.endDate}
+                  devList={item.devList}
+                  logo={item.logo.url}
+                />
+              </S.Project>
+            ))}
+            <S.View>
+              <Link to={"/list"}>View All</Link>
+            </S.View>
+          </S.ProjectList>
+        </S.ProjectContainer>
         <S.ExplainContainer>
           <S.Explain
             style={{
