@@ -5,15 +5,23 @@ import { BASE_URL } from "../../../../lib/export/data";
 import { useEffect, useState } from "react";
 
 export default function SchoolPhoto() {
-  const [photo, setPhoto] = useState<string[]>([
+  const photo: string[] = [
     "https://dsmhs.djsch.kr//upload/edit/20201127/IMG_085251.jpg",
     "https://dsmhs.djsch.kr/upload/edit/20211018/IMG_150309.jpg",
     "https://dsmhs.djsch.kr/upload/edit/20220426/IMG_091418.jpeg",
     "https://dsmhs.djsch.kr//upload/edit/20190926/IMG_193039.jpg",
     "https://dsmhs.djsch.kr/upload/edit/20220426/IMG_161514.jpg",
     "https://dsmhs.djsch.kr/upload/edit/20211020/IMG_141406.jpg",
-  ]);
+  ];
   const [content, setContent] = useState<string>("");
+
+  const mouseEvent = (e: any, str: string) => {
+    if (str === "enter") {
+      e.target.classList.add("increase");
+    } else if (str === "leave") {
+      e.target.classList.remove("increase");
+    }
+  };
 
   // useEffect(() => {
   //   const getPhoto = () => {
@@ -54,6 +62,8 @@ export default function SchoolPhoto() {
                 src={item}
                 alt="이미지를 불러올 수 없었습니다."
                 className={`img${i}`}
+                onMouseEnter={(e) => mouseEvent(e, "enter")}
+                onMouseLeave={(e) => mouseEvent(e, "leave")}
               />
             </>
           ))}

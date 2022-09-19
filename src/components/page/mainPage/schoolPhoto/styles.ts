@@ -2,11 +2,13 @@ import styled from "styled-components";
 
 export const School = styled.div`
   width: 100%;
+  height: 100vh;
   padding: 166px 100px 90px 126px;
   box-sizing: border-box;
   display: inline-flex;
   justify-content: space-between;
   scroll-snap-align: start;
+  background-color: #c9c9c9;
 `;
 
 export const SchoolTitle = styled.div`
@@ -28,7 +30,7 @@ export const SchoolTitle = styled.div`
 `;
 
 export const SchoolName = styled.div`
-  color: #c9c9c9;
+  color: #262626;
   font-size: 30px;
   opacity: 0.5;
   font-family: "Gowun Batang", serif;
@@ -42,7 +44,7 @@ export const SchoolMainTitle = styled.div`
 
 export const SchoolSubTitle = styled.div<{ size?: number }>`
   font-size: ${(props) => props.size + "px"};
-  color: #c9c9c9;
+  color: #262626;
   text-align: center;
 `;
 
@@ -86,6 +88,19 @@ export const SchoolGrid = styled.div`
     height: 210px;
     object-fit: cover;
   }
+
+  .increase {
+    animation: 1s scale;
+    animation-fill-mode: forwards;
+    @keyframes scale {
+      0% {
+        transform: scale(1, 1);
+      }
+      100% {
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
 `;
 
 export const SchoolButton = styled.div`
@@ -94,16 +109,16 @@ export const SchoolButton = styled.div`
   font-size: 20px;
   margin-bottom: 10px;
   margin-right: 24px;
-  color: #c9c9c9;
+  color: #262626;
   font-weight: bold;
   font-family: "Gowun Batang", serif;
 
   a:link {
     text-decoration: none;
-    color: #c9c9c9;
+    color: #262626;
   }
   a:visited {
-    color: #c9c9c9;
+    color: #262626;
   }
 `;
 
@@ -114,6 +129,6 @@ export const SchoolExplain = styled.div`
   top: 37px;
   left: 0;
   font-size: 20px;
-  color: #c9c9c9;
+  color: #262626;
   font-family: "Song Myung", serif;
 `;
