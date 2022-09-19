@@ -31,7 +31,17 @@ export default function MainPage() {
   return (
     <>
       <S.MainDiv>
-        <S.Banner id="banner" />
+        <S.Banner id="banner">
+          <div>
+            <p>
+              <S.Title>DSQL</S.Title>
+              <br />
+              <S.Description>
+                DDNS Serve information Quickest with Liability
+              </S.Description>
+            </p>
+          </div>
+        </S.Banner>
         <SchoolPhoto />
         <S.ExplainContainer>
           <div

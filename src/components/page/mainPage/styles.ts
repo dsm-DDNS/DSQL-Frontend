@@ -5,22 +5,48 @@ export const MainDiv = styled.div`
   overflow: auto;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  height: 937px;
+  height: 100vh;
   /* overflow-y: hidden; */
   &::-webkit-scrollbar {
     display: none;
   }
+
+  background-color: #262626;
+  z-index: 2;
 `;
 
 export const Banner = styled.div`
   width: 100%;
-  height: 937px;
+  height: 100vh;
   scroll-snap-align: start;
   background-image: url(${bannerImage});
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   scroll-snap-align: start;
+
+  div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #c9c9c9;
+
+    p {
+      text-align: center;
+    }
+  }
+`;
+
+export const Title = styled.a`
+  font-size: 100px;
+  font-weight: 500;
+`;
+
+export const Description = styled.a`
+  font-size: 40px;
 `;
 
 export const View = styled.div`
