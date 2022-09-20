@@ -67,15 +67,15 @@ export const View = styled.div`
   right: 150px;
   top: 30px;
   font-size: 20px;
-  color: #c9c9c9;
+  color: #262626;
   font-family: "Gowun Batang", serif;
   font-weight: bold;
   a:link {
     text-decoration: none;
-    color: #c9c9c9;
+    color: #262626;
   }
   a:visited {
-    color: #c9c9c9;
+    color: #262626;
   }
 `;
 

@@ -40,6 +40,7 @@ export const PostContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-right: 75px;
+  margin-top: 150px;
 `;
 export const Title = styled.div<{ size: number }>`
   color: #c9c9c9;
@@ -67,5 +68,4 @@ export const SubDiv = styled.div`
 export const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 57px;
 `;

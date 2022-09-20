@@ -27,7 +27,7 @@ export default function PhotoAlbum() {
       });
     };
     getPhoto();
-  }, []);
+  }, [photo]);
 
   return (
     <S.MainDiv>

@@ -28,7 +28,7 @@ export default function ProjectList() {
     if (scrolled) {
       getProject();
     }
-  }, [scrolled]);
+  }, [setScrolled, setProject, setCnt]);
 
   if (document) {
     document.getElementById("list")?.addEventListener("scroll", (e) => {

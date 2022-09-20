@@ -27,7 +27,7 @@ export default function NewsPaper() {
       });
     };
     getNews();
-  }, []);
+  }, [setContents]);
 
   return (
     <S.MainDiv>

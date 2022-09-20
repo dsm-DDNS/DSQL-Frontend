@@ -41,35 +41,6 @@ export default function Project(props: any) {
     setShowDev(devList.slice(6 * i, 6 * (i + 1)));
   };
 
-  const settings = {
-    dots: false,  // 점은 안 보이게
-    infinite: true, // 무한으로 즐기게
-    speed: 500,
-    slidesToShow: 4, //4장씩 보이게 해주세요
-    slidesToScroll: 1, //1장씩 넘어가세요
-    
-    responsive: [ // 반응형 웹 구현 옵션
-      {
-          breakpoint: 1200, // 화면 사이즈 1200px
-          settings: {
-            slidesToShow: 3,
-          }
-      },
-      {
-        breakpoint: 1023,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  };
-
   return (
     <>
       <S.Project>

@@ -33,12 +33,13 @@ export const SchoolPaperTitle = styled.div`
 
 export const SchoolPaperContent = styled.div`
   width: 704px;
-  height: 700px;
+  height: 680px;
   overflow: hidden;
   overflow: scroll;
   overflow-x: hidden;
   font-size: 30px;
   right: 74px;
+  margin-top: 30px;
   color: #c9c9c9;
   font-family: "Gowun Batang", serif;
   &::-webkit-scrollbar {
@@ -53,9 +54,17 @@ export const SchoolPaperContent = styled.div`
   }
 `;
 
+export const DeleteBtn = styled.div`
+  position: absolute;
+  right: 0;
+  top: -30px;
+  color: #c9c9c9;
+  font-size: 40px;
+  cursor: pointer;
+`
+
 export const Content = styled.div`
   display: flex;
-  align-items: center;
   position: relative;
 `;
 
