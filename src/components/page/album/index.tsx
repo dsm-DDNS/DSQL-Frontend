@@ -4,6 +4,7 @@ import * as S from "./styles";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../../../lib/export/data";
+import PhotoModal from "../modal";
 
 interface dataType {
   title?: string;
@@ -13,6 +14,7 @@ interface dataType {
 
 export default function PhotoAlbum() {
   const [photo, setPhoto] = useState([]);
+  const [modal, setModal] = useState("");
 
   useEffect(() => {
     const getPhoto = () => {
@@ -29,34 +31,45 @@ export default function PhotoAlbum() {
     getPhoto();
   }, [photo]);
 
+  const showModal = (n: number) => {
+    setModal(photo[n]);
+  };
+
+  const onDelete = () => {
+    setModal("");
+  };
+
   return (
-    <S.MainDiv>
-      <S.SubDiv>
-        <S.Title size={70}>Press release</S.Title>
-        <S.Title size={30} style={{ marginLeft: "160px" }}>
-          and
-        </S.Title>
-        <S.Title size={70}>Photo album</S.Title>
-        <hr />
-      </S.SubDiv>
-      <S.PostContainer>
-        <S.PostDiv>
-          {photo.map((item: dataType) => (
-            <>
-              <Post
-                title={item.title}
-                content={item.shortContent}
-                imgURL={item.imgList[0]}
-              />
-            </>
-          ))}
-        </S.PostDiv>
-      </S.PostContainer>
-      <S.ExplainContainer>
-        <S.Explain style={{ justifyContent: "flex-start" }}>
-          DaeDeck NewS
-        </S.Explain>
-      </S.ExplainContainer>
-    </S.MainDiv>
+    <>
+      {modal ? <PhotoModal item={modal} func={onDelete} /> : <></>}
+      <S.MainDiv>
+        <S.SubDiv>
+          <S.Title size={70}>Press release</S.Title>
+          <S.Title size={30} style={{ marginLeft: "160px" }}>
+            and
+          </S.Title>
+          <S.Title size={70}>Photo album</S.Title>
+          <hr />
+        </S.SubDiv>
+        <S.PostContainer>
+          <S.PostDiv>
+            {photo.map((item: dataType, i: number) => (
+              <div onClick={() => showModal(i)}>
+                <Post
+                  title={item.title}
+                  content={item.shortContent}
+                  imgURL={item.imgList[0]}
+                />
+              </div>
+            ))}
+          </S.PostDiv>
+        </S.PostContainer>
+        <S.ExplainContainer>
+          <S.Explain style={{ justifyContent: "flex-start" }}>
+            DaeDeck NewS
+          </S.Explain>
+        </S.ExplainContainer>
+      </S.MainDiv>
+    </>
   );
 }

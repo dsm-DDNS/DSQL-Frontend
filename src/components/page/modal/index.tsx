@@ -1,14 +1,11 @@
 import * as S from "./styles";
 
 export default function PhotoModal(props: any) {
-  const onDelete = () => {
-    props.func();
-  };
 
   return (
     <>
       <S.MainDiv>
-        <S.DeleteBtn onClick={() => onDelete()}>⨉</S.DeleteBtn>
+        <S.DeleteBtn onClick={() => props.func()}>⨉</S.DeleteBtn>
         <S.Container>
           <img src="" alt="" />
           <div>

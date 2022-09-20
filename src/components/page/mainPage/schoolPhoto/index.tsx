@@ -3,7 +3,7 @@ import * as S from "./styles";
 import axios from "axios";
 import { BASE_URL } from "../../../../lib/export/data";
 import { useEffect, useState } from "react";
-import PhotoModal from "./modal";
+import PhotoModal from "../../modal";
 
 export default function SchoolPhoto() {
   const [content, setContent] = useState<string>("");
@@ -60,7 +60,7 @@ export default function SchoolPhoto() {
         </S.SchoolTitle>
         <S.SchoolView>
           <S.SchoolButton>
-            {/* <Link to={"/photo"}>View All</Link> */}
+            <Link to={"/photo"}>View All</Link>
           </S.SchoolButton>
           <S.SchoolExplain>{content}</S.SchoolExplain>
           <S.SchoolGrid>

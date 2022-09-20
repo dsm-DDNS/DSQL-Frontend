@@ -31,9 +31,9 @@ export const imageTitle = styled.div`
 export const P = styled.p`
   width: 358px;
   height: 170px;
-  overflow: hidden;
-  overflow: scroll;
-  overflow-x: hidden;
+  /* overflow: hidden; */
+  /* overflow: scroll; */
+  /* overflow-x: hidden; */
   color: #c9c9c9;
   font-family: "Gowun Batang", serif;
   &::-webkit-scrollbar {
