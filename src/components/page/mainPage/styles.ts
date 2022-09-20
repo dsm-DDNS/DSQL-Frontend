@@ -34,13 +34,14 @@ export const Banner = styled.div`
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 
     color: #c9c9c9;
 
     p {
       opacity: 1;
-      text-align: center;
+      text-align: end;
+      margin-right: 100px;
     }
   }
 `;
@@ -58,6 +59,7 @@ export const Title = styled.a`
 
 export const Description = styled.a`
   font-size: 40px;
+  font-weight: 400;
 `;
 
 export const View = styled.div`
