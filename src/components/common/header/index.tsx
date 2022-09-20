@@ -1,7 +1,6 @@
 import * as S from "./styles";
 
 export default function Header() {
-  const nav = ["banner", "photo", "news", "project", "develop"];
   return (
     <S.HeaderDiv>
       <span>
@@ -143,11 +142,6 @@ export default function Header() {
           </g>
         </svg>
       </span>
-      <S.Sections>
-        {nav.map((item) => (
-          <a href={`#${item}`}>{item}</a>
-        ))}
-      </S.Sections>
     </S.HeaderDiv>
   );
 }

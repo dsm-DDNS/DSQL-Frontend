@@ -3,7 +3,7 @@ import * as S from "./styles";
 import axios from "axios";
 import { BASE_URL } from "../../../../lib/export/data";
 import { useEffect, useState } from "react";
-import PhotoModal from "../../modal";
+import PhotoModal from "../../../common/modal";
 
 export default function SchoolPhoto() {
   const [content, setContent] = useState<string>("");

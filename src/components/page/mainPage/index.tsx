@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../../lib/export/data";
 import { useEffect, useState } from "react";
+import SideBar from "../../common/sidebar";
 
 export default function MainPage() {
   const developerName: string[] = ["이동현", "안진우", "남요셉", "김순호"];
@@ -30,6 +31,7 @@ export default function MainPage() {
 
   return (
     <>
+      <SideBar />
       <S.MainDiv>
         <S.Background>
           <S.Banner id="banner">
