@@ -49,7 +49,7 @@ export const Banner = styled.div`
 export const ProjectContainer = styled.div`
   background-color: #c9c9c9;
   margin-top: 146px;
-  height: 125vh;
+  height: 100vh;
 `;
 
 export const Title = styled.a`

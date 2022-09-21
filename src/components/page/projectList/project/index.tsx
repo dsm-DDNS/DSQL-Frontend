@@ -29,7 +29,6 @@ export default function Project(props: any) {
   };
 
   const showPage = (i: number) => {
-    console.log(i);
     setCurrentSlide(i);
     setShowDev(devList.slice(6 * i, 6 * (i + 1)));
   };

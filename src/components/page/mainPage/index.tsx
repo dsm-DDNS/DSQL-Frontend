@@ -5,7 +5,7 @@ import SchoolPaper from "./schoolPaper";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../../lib/export/data";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SideBar from "../../common/sidebar";
 
 export default function MainPage() {
@@ -32,40 +32,38 @@ export default function MainPage() {
   return (
     <>
       <SideBar />
-      <S.MainDiv>
-        <S.Background>
-          <S.Banner id="banner">
-            <div>
-              <p>
-                <S.Title>DSQL</S.Title>
-                <br />
-                <S.Description>
-                  DDNS Serve information Quickest with Liability
-                </S.Description>
-              </p>
-            </div>
-          </S.Banner>
-        </S.Background>
-        <SchoolPhoto />
-        <S.ExplainContainer>
-          <div
-            style={{
-              marginTop: "146px",
-              scrollSnapAlign: "start",
-            }}
-            id="news"
-          >
-            ㅤ
+      {/* <S.MainDiv> */}
+      <S.Background>
+        <S.Banner id="banner">
+          <div>
+            <p>
+              <S.Title>DSQL</S.Title>
+              <br />
+              <S.Description>
+                DDNS Serve information Quickest with Liability
+              </S.Description>
+            </p>
           </div>
-          <S.Explain
-            style={{
-              justifyContent: "flex-start",
-              marginTop: "86px",
-            }}
-          >
-            DaeDeck NewS
-          </S.Explain>
-          {/* <S.Explain style={{ justifyContent: "flex-end" }}>
+        </S.Banner>
+      </S.Background>
+      <SchoolPhoto />
+      <S.ExplainContainer>
+        <div
+          style={{
+            scrollSnapAlign: "start",
+          }}
+          id="news"
+        >
+          ㅤ
+        </div>
+        <S.Explain
+          style={{
+            justifyContent: "flex-start",
+          }}
+        >
+          DaeDeck NewS
+        </S.Explain>
+        {/* <S.Explain style={{ justifyContent: "flex-end" }}>
             DDNS Serve information Quickest with Liability
           </S.Explain>
           <S.Explain
@@ -73,78 +71,73 @@ export default function MainPage() {
           >
             DaeDeck NewS
           </S.Explain> */}
-        </S.ExplainContainer>
-        <SchoolPaper />
-        <S.ProjectContainer>
-          <S.ExplainContainer>
-            <S.Explain
-              style={{ justifyContent: "flex-start", marginBottom: "146px" }}
-            >
-              DDNS Serve information Quickest with Liability
-            </S.Explain>
-            <div
-              style={{
-                marginTop: "146px",
-                scrollSnapAlign: "start",
-              }}
-              id="project"
-            >
-              ㅤ
-            </div>
-            <S.Explain
-              style={{ justifyContent: "flex-end", marginTop: "86px" }}
-            >
-              DaeDeck ProjectList
-            </S.Explain>
-          </S.ExplainContainer>
-          <S.ProjectList>
-            {project.map((item: any, i: number) => (
-              <S.Project marginNumber={pos[i]}>
-                <Project
-                  img={item.imgList}
-                  introduction={item.introduction}
-                  startDate={item.startDate}
-                  endDate={item.endDate}
-                  devList={item.devList}
-                  logo={item.logo.url}
-                />
-              </S.Project>
-            ))}
-            <S.View>
-              <Link to={"/list"}>View All</Link>
-            </S.View>
-          </S.ProjectList>
-        </S.ProjectContainer>
+      </S.ExplainContainer>
+      <SchoolPaper />
+      <S.ProjectContainer>
         <S.ExplainContainer>
-          <S.Explain
+          <S.Explain style={{ justifyContent: "flex-start" }}>
+            DDNS Serve information Quickest with Liability
+          </S.Explain>
+          <div
             style={{
-              justifyContent: "flex-start",
-              marginTop: "114px",
               scrollSnapAlign: "start",
             }}
-            id="develop"
+            id="project"
           >
-            DaedeokSoftwareMeisterHighSchool
-          </S.Explain>
-          <S.Explain
-            style={{
-              justifyContent: "flex-start",
-              marginTop: "78px",
-              opacity: "1",
-            }}
-          >
-            Developers
+            ㅤ
+          </div>
+          <S.Explain style={{ justifyContent: "flex-end" }}>
+            DaeDeck ProjectList
           </S.Explain>
         </S.ExplainContainer>
-        <S.Footer>
-          {developerName.map((name) => (
-            <S.Developer>
-              <hr />
-              <div>{name}</div>
-            </S.Developer>
+        <S.ProjectList>
+          {project.map((item: any, i: number) => (
+            <S.Project marginNumber={pos[i]}>
+              <Project
+                img={item.imgList}
+                introduction={item.introduction}
+                startDate={item.startDate}
+                endDate={item.endDate}
+                devList={item.devList}
+                logo={item.logo.url}
+              />
+            </S.Project>
           ))}
-        </S.Footer>
-      </S.MainDiv>
+          <S.View>
+            <Link to={"/list"}>View All</Link>
+          </S.View>
+        </S.ProjectList>
+      </S.ProjectContainer>
+      <S.ExplainContainer>
+        <S.Explain
+          style={{
+            justifyContent: "flex-start",
+            marginTop: "114px",
+            scrollSnapAlign: "start",
+          }}
+          id="develop"
+        >
+          DaedeokSoftwareMeisterHighSchool
+        </S.Explain>
+        <S.Explain
+          style={{
+            justifyContent: "flex-start",
+            marginTop: "78px",
+            opacity: "1",
+          }}
+        >
+          Developers
+        </S.Explain>
+      </S.ExplainContainer>
+      <S.Footer>
+        {developerName.map((name) => (
+          <S.Developer>
+            <hr />
+            <div>{name}</div>
+          </S.Developer>
+        ))}
+      </S.Footer>
+      {/* </S.MainDiv> */}
     </>
   );
 }

@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const MainDiv = styled.div`
   position: fixed;
   left: 0;
-  top: 50%;
   transform: translateY(-50%);
   z-index: 99;
   mix-blend-mode: difference;
