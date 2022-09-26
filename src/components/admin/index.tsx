@@ -110,10 +110,6 @@ export default function AdminPage() {
   }
 
   async function projectPost() {
-    console.log(projectData);
-    console.log(formData);
-    console.log(logoFormData);
-    console.log(showImage[0].size);
     if (showImage[0] !== "" && logoShowImage[0] !== "") {
       axios({
         method: "POST",
@@ -167,11 +163,19 @@ export default function AdminPage() {
           });
         })
         .catch((err) => {
-          Swal.fire({
-            title: "내용을 정확히 기재해주세요.",
-            icon: "error",
-            confirmButtonText: "Ok",
-          });
+          if (err.response.status === 401) {
+            Swal.fire({
+              title: "로그인을 해주세요.",
+              icon: "error",
+              confirmButtonText: "Ok",
+            });
+          } else {
+            Swal.fire({
+              title: "내용을 정확히 기재해주세요.",
+              icon: "error",
+              confirmButtonText: "Ok",
+            });
+          }
         });
     } else {
       Swal.fire({
@@ -274,11 +278,7 @@ export default function AdminPage() {
 
   return (
     <>
-      <S.Post
-        style={{
-          marginTop: "0px",
-        }}
-      >
+      <S.Post>
         <S.SubDiv>
           <S.Title size={70}>School Paper</S.Title>
           <hr />

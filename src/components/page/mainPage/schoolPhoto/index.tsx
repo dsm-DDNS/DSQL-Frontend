@@ -37,7 +37,6 @@ export default function SchoolPhoto() {
 
   const photoClick = (i: number) => {
     if (data) {
-      console.log(data[i]);
       setModal(data[i]);
     }
   };

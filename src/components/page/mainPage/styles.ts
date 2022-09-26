@@ -12,7 +12,7 @@ export const MainDiv = styled.div`
   }
 
   background-color: #262626;
-  z-index: 2;
+  z-index: 99;
 `;
 
 export const Background = styled.div`

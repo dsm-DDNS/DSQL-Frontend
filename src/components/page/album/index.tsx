@@ -22,7 +22,7 @@ export default function PhotoAlbum() {
         method: "GET",
         url: BASE_URL + "/api/dsql/v1/post/list",
         params: {
-          size: 16,
+          size: 30,
         },
       }).then((res) => {
         setPhoto(res.data.shortPostList);

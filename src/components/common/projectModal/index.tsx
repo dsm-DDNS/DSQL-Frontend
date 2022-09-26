@@ -58,7 +58,6 @@ export default function ProjectModal(props: any) {
     setShowDev(devList.slice(6 * i, 6 * (i + 1)));
   };
 
-  console.log(image);
   return (
     <>
       <S.MainDiv>

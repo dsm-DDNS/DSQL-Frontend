@@ -6,6 +6,7 @@ export const HeaderDiv = styled.div`
   background-color: #262626;
   position: absolute;
   z-index: 99;
+  top: 0;
   display: inline-flex;
   justify-content: space-between;
   align-items: flex-end;

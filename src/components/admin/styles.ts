@@ -5,7 +5,7 @@ export const Post = styled.div`
   display: block;
   width: 100%;
   height: 937px;
-  margin-top: 300px;
+  margin-top: 150px;
 `;
 
 export const Bundle = styled.div`
