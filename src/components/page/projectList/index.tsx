@@ -40,6 +40,7 @@ export default function ProjectList() {
       }
     });
   }
+  console.log(project)
 
   return (
     <>
@@ -54,9 +55,10 @@ export default function ProjectList() {
               devList={item.devList}
               content={item.introduction}
               logo={item.logo}
-              image={item.imgList[0]}
+              image={item.imgList}
               startDate={item.startDate}
               endDate={item.endDate}
+              title={item.title}
             />
           </>
         ))}

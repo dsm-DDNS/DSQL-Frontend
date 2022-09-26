@@ -87,6 +87,7 @@ export const Developer = styled.div`
   color: #ffffff;
   font-size: 20px;
   font-family: "Gowun Batang", serif;
+  width: 150px;
 `;
 
 export const Period = styled.div`

@@ -3,7 +3,7 @@ import * as S from "./styles";
 import axios from "axios";
 import { BASE_URL } from "../../../../lib/export/data";
 import { useEffect, useState } from "react";
-import PhotoModal from "../../../common/modal";
+import PhotoModal from "../../../common/photoModal";
 
 export default function SchoolPhoto() {
   const [content, setContent] = useState<string>("");
@@ -37,6 +37,7 @@ export default function SchoolPhoto() {
 
   const photoClick = (i: number) => {
     if (data) {
+      console.log(data[i]);
       setModal(data[i]);
     }
   };

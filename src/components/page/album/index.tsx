@@ -4,7 +4,7 @@ import * as S from "./styles";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../../../lib/export/data";
-import PhotoModal from "../../common/modal";
+import PhotoModal from "../../common/photoModal";
 
 interface dataType {
   title?: string;

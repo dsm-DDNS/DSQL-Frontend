@@ -110,6 +110,10 @@ export default function AdminPage() {
   }
 
   async function projectPost() {
+    console.log(projectData);
+    console.log(formData);
+    console.log(logoFormData);
+    console.log(showImage[0].size);
     if (showImage[0] !== "" && logoShowImage[0] !== "") {
       axios({
         method: "POST",
@@ -242,10 +246,20 @@ export default function AdminPage() {
       const formData = new FormData();
       let arr = [];
       for (let i = 0; i < e.target.files.length; i++) {
-        if (props === "image") formData.append("image", e.target.files[i]);
-        else if (props === "logo") formData.append("logo", e.target.files[i]);
+        if (e.target.files[i].size <= 1000000) {
+          if (props === "image") formData.append("image", e.target.files[i]);
+          else if (props === "logo") formData.append("logo", e.target.files[i]);
 
-        arr.push(e.target.files[i]);
+          arr.push(e.target.files[i]);
+        } else {
+          Swal.fire({
+            title: "파일이 너무 아름다워요.",
+            icon: "error",
+            confirmButtonText: "Ok",
+          });
+          arr = [""];
+          break;
+        }
       }
 
       if (props === "image") {

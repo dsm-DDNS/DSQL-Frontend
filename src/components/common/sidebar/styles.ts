@@ -19,6 +19,7 @@ export const Section = styled.div`
     background-color: #242424;
     filter: invert(100%);
     transform: rotateZ(270deg);
+    transition: 0.3s;
   }
 
   div {

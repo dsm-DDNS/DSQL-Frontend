@@ -23,6 +23,7 @@ export default function MainPage() {
           size: 4,
         },
       }).then((res) => {
+        console.log(res.data.projectList);
         setProject(res.data.projectList);
       });
     };
@@ -94,12 +95,13 @@ export default function MainPage() {
           {project.map((item: any, i: number) => (
             <S.Project marginNumber={pos[i]}>
               <Project
-                img={item.imgList}
+                image={item.imgList}
                 introduction={item.introduction}
                 startDate={item.startDate}
                 endDate={item.endDate}
                 devList={item.devList}
                 logo={item.logo.url}
+                title={item.title}
               />
             </S.Project>
           ))}

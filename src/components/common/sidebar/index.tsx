@@ -25,7 +25,6 @@ export default function SideBar() {
   };
 
   document.addEventListener("scroll", (e) => {
-    console.log(window.pageYOffset, window.innerHeight);
     for (let i = 1; i < section.length + 1; i++) compare(i);
   });
 

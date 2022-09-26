@@ -17,19 +17,14 @@ export const MainDiv = styled.div`
 export const Container = styled.div`
   display: flex;
 
-  img {
-    width: 716px;
-    height: 420px;
-    object-fit: cover;
-  }
-
-  div {
+  /* div {
     margin-left: 30px;
-  }
+  } */
 `;
 
 export const Title = styled.div`
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: 500;
 `;
 
 export const DeleteBtn = styled.div`

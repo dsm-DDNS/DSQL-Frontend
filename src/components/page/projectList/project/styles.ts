@@ -62,12 +62,6 @@ export const Developer = styled.div`
   font-size: 20px;
 `;
 
-export const Period = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 75px;
-`;
-
 export const Pagination = styled.div`
   text-align: center;
   font-size: 30px;
@@ -78,4 +72,10 @@ export const ShowDev = styled.div`
     color: #bcbcbc;
     cursor: pointer;
   }
+`;
+
+export const Period = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 75px;
 `;
