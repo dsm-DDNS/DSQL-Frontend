@@ -119,7 +119,12 @@ export default function MainPage() {
           }}
           id="develop"
         >
-          DaedeokSoftwareMeisterHighSchool
+          <p>
+            DSQL이란?<br/> 대덕소프트웨어마이스터고등학교 신문부에서 제작하였습니다.<br/>
+            학교 신문부에서 제작하는 교지 내용을 업로드하고,<br/> 교내 산학협력부
+            네이버 블로그에서 업로드한 게시물을 제공하여 교외에서 알지못하는
+            다양한 정보를 제공하기 위해 노력합니다.
+          </p>
         </S.Explain>
         <S.Explain
           style={{
